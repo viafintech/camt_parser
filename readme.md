@@ -9,7 +9,7 @@ Fields that we did not need for our use-cases are simply ignored for now.
 
 1. add the Gem to the Gemfile
 
-        gem 'bz_gamt_parser'
+        gem 'bz_camt_parser'
 
 2. Require the Gem at any point before using it
 3. Use it!.
