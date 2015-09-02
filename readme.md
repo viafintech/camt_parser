@@ -28,7 +28,7 @@ camt.statements.each do |statement|
 end
 ```
 
-Please check the code for fields not mentioned here
+Please check the code for fields not mentioned here - mostly the `attr_reader of the classes
 
 ## Bugs and Contribution
 For bugs and feature requests open an issue on Github. For code contributions fork the repo, make your changes and create a pull request.
