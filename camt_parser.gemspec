@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.name          = "camt_parser"
   spec.version       = CamtParser::VERSION
   spec.authors       = ["Tobias Schoknecht"]
-  spec.email         = ["tobias.schoknecht@gmail.com"]
+  spec.email         = ["tobias.schoknecht@barzahlen.de"]
   spec.description   = %q{A parser for the Camt file format}
   spec.summary       = %q{Gem for parsing camt files into a speaking object.}
   spec.homepage      = ""

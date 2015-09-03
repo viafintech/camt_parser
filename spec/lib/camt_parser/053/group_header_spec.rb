@@ -8,6 +8,7 @@ describe CamtParser::Format053::GroupHeader do
     expect(group_header.message_id).to eq("ABCDEFG_YF0000_20150821A000000000")
     expect(group_header.creation_date_time.class).to eq(Time)
     expect(group_header.message_pagination.class).to eq(CamtParser::Format053::MessagePagination)
+    expect(group_header.additional_information).to eq(nil)
   end
 end
 

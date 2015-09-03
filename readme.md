@@ -1,5 +1,7 @@
 # CamtParser
 
+![Travis Build state](https://api.travis-ci.org/Barzahlen/camt_parser.svg)
+
 CamtParser is a Ruby Gem which does some basic parsing of camt053 files into an object structure
 for easier usability instead of having to use an XML parser all the time.
 Keep in mind that this does not include a complete parsing of the camt053 specification.
