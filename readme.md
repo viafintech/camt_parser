@@ -14,7 +14,7 @@ Fields that we did not need for our use-cases are simply ignored for now.
         gem 'camt_parser'
 
 2. Require the Gem at any point before using it
-3. Use it!.
+3. Use it!
 
 ## Example
 ```ruby
