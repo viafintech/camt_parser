@@ -1,3 +1,3 @@
-module BzCamtParser
+module CamtParser
   VERSION = "1.0.0"
 end

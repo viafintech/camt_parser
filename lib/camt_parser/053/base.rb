@@ -1,4 +1,4 @@
-module BzCamtParser
+module CamtParser
   module Format053
     class Base
       attr_reader :group_header, :statements

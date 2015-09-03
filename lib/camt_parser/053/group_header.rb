@@ -1,6 +1,6 @@
 require 'time'
 
-module BzCamtParser
+module CamtParser
   module Format053
     class GroupHeader
       attr_reader :message_id, :creation_date_time, :additional_information, :message_pagination

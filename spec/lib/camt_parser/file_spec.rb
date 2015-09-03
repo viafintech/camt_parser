@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe BzCamtParser::File do
+describe CamtParser::File do
   context "parse" do
     it "raises an exception if the namespace/format is unknown" do
       expect{
@@ -9,7 +9,7 @@ describe BzCamtParser::File do
     end
 
     it "does not raise an exception for a valid namespace" do
-      expect(BzCamtParser::Format053::Base).to receive(:new)
+      expect(CamtParser::Format053::Base).to receive(:new)
       described_class.parse 'spec/fixtures/valid_namespace.xml'
     end
   end

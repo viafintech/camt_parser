@@ -1,7 +1,7 @@
 require 'time'
 require 'bigdecimal'
 
-module BzCamtParser
+module CamtParser
   module Format053
     class Statement
       attr_reader :identification, :creation_date_time, :from_date_time, :to_date_time,

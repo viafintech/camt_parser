@@ -1,6 +1,6 @@
-# BzCamtParser
+# CamtParser
 
-BzCamtParser is a Ruby Gem which does some basic parsing of camt053 files into an object structure
+CamtParser is a Ruby Gem which does some basic parsing of camt053 files into an object structure
 for easier usability instead of having to use an XML parser all the time.
 Keep in mind that this does not include a complete parsing of the camt053 specification.
 Fields that we did not need for our use-cases are simply ignored for now.
@@ -9,7 +9,7 @@ Fields that we did not need for our use-cases are simply ignored for now.
 
 1. add the Gem to the Gemfile
 
-        gem 'bz_camt_parser'
+        gem 'camt_parser'
 
 2. Require the Gem at any point before using it
 3. Use it!.

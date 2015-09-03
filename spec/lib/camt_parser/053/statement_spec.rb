@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-describe BzCamtParser::Format053::Statement do
-  let(:camt)       { BzCamtParser::File.parse('spec/fixtures/valid_example.xml') }
+describe CamtParser::Format053::Statement do
+  let(:camt)       { CamtParser::File.parse('spec/fixtures/valid_example.xml') }
   let(:statements) { camt.statements }
   let(:ex_stmt)    { camt.statements[0] }
 
@@ -16,11 +16,11 @@ describe BzCamtParser::Format053::Statement do
     expect(ex_stmt.creation_date_time.class).to eq(Time)
     expect(ex_stmt.from_date_time).to eq(nil)
     expect(ex_stmt.to_date_time).to eq(nil)
-    expect(ex_stmt.account.class).to eq(BzCamtParser::Format053::Account)
+    expect(ex_stmt.account.class).to eq(CamtParser::Format053::Account)
     expect(ex_stmt.entries.class).to eq(Array)
   end
 
-  describe BzCamtParser::Format053::Account do
+  describe CamtParser::Format053::Account do
     let(:account) { ex_stmt.account }
 
     it "parses the account properly into a class" do
@@ -30,7 +30,7 @@ describe BzCamtParser::Format053::Statement do
     end
   end
 
-  describe BzCamtParser::Format053::Entry do
+  describe CamtParser::Format053::Entry do
     let(:entries)  { ex_stmt.entries }
     let(:ex_entry) { ex_stmt.entries[0] }
 
@@ -46,12 +46,12 @@ describe BzCamtParser::Format053::Statement do
       expect(ex_entry.currency).to eq('EUR')
       expect(ex_entry.value_date.class).to eq(Date)
       expect(ex_entry.value_date).to eq(Date.new(2015, 8, 21))
-      expect(ex_entry.creditor.class).to eq(BzCamtParser::Format053::Creditor)
-      expect(ex_entry.debitor.class).to eq(BzCamtParser::Format053::Debitor)
+      expect(ex_entry.creditor.class).to eq(CamtParser::Format053::Creditor)
+      expect(ex_entry.debitor.class).to eq(CamtParser::Format053::Debitor)
       expect(ex_entry.remittance_information).to eq("Nr. 1234567 / 06.08.2015")
     end
 
-    describe BzCamtParser::Format053::Debitor do
+    describe CamtParser::Format053::Debitor do
       let(:debitor) { ex_entry.debitor }
 
       it "contains certain attributes" do
@@ -62,7 +62,7 @@ describe BzCamtParser::Format053::Statement do
       end
     end
 
-    describe BzCamtParser::Format053::Creditor do
+    describe CamtParser::Format053::Creditor do
       let(:creditor) { ex_entry.creditor }
 
       it "contains certain attributes" do

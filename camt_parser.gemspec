@@ -1,12 +1,12 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'bz_camt_parser/version'
+require 'camt_parser/version'
 
 Gem::Specification.new do |spec|
   # For explanations see http://docs.rubygems.org/read/chapter/20
-  spec.name          = "bz_camt_parser"
-  spec.version       = BzCamtParser::VERSION
+  spec.name          = "camt_parser"
+  spec.version       = CamtParser::VERSION
   spec.authors       = ["Tobias Schoknecht"]
   spec.email         = ["tobias.schoknecht@gmail.com"]
   spec.description   = %q{A parser for the Camt file format}
