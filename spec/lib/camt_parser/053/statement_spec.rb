@@ -49,6 +49,9 @@ describe CamtParser::Format053::Statement do
       expect(ex_entry.creditor.class).to eq(CamtParser::Format053::Creditor)
       expect(ex_entry.debitor.class).to eq(CamtParser::Format053::Debitor)
       expect(ex_entry.remittance_information).to eq("Nr. 1234567 / 06.08.2015 123456 X 123")
+      expect(ex_entry.additional_information).to eq(
+        "Überweisungs-Gutschrift; GVC: SEPA Credit Transfer (Einzelbuchung-Haben)"
+      )
     end
 
     describe CamtParser::Format053::Debitor do

@@ -18,7 +18,8 @@ module CamtParser
     end
 
     class Entry
-      attr_reader :amount, :currency, :value_date, :debitor, :creditor, :remittance_information
+      attr_reader :amount, :currency, :value_date, :debitor, :creditor, :remittance_information,
+                  :additional_information
 
       def initialize(xml_data)
         @amount     = BigDecimal.new(xml_data.xpath('Amt').first.content)
@@ -27,6 +28,7 @@ module CamtParser
         @value_date = Date.parse(xml_data.xpath('ValDt/Dt').first.content)
         @creditor   = Creditor.new(xml_data.xpath('NtryDtls'))
         @debitor    = Debitor.new(xml_data.xpath('NtryDtls'))
+        @additional_information = xml_data.xpath('AddtlNtryInf').first.content
         # Makes the assumption that only unstructured remittance information will be given
         if (x = xml_data.xpath('NtryDtls/TxDtls/RmtInf/Ustrd')).empty?
           @remittance_information = nil
