@@ -10,7 +10,7 @@ module CamtParser
         doc.remove_namespaces!
         return CamtParser::Format053::Base.new(doc.xpath("Document"))
       else
-        raise "unknown or unsupported namespace: #{doc.namespaces["xlmns"]}"
+        raise CamtParser::Errors::UnsupportedNamespaceError, doc.namespaces["xmlns"]
       end
     end
   end
