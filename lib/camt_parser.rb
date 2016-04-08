@@ -8,3 +8,4 @@ require "camt_parser/053/group_header"
 require "camt_parser/053/statement"
 require "camt_parser/053/base"
 require "camt_parser/file"
+require 'camt_parser/string'
