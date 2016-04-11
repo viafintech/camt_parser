@@ -24,5 +24,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "builder",               "~> 3.2.2" # Needed for ci-reporter
   spec.add_development_dependency "rspec_junit_formatter", "~> 0.2.2"
 
-  spec.add_runtime_dependency "nokogiri",  "~> 1.6.6.2"
+  spec.add_runtime_dependency "nokogiri"
+  spec.add_runtime_dependency "activesupport"
 end
