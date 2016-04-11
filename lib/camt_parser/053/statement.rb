@@ -6,7 +6,7 @@ module CamtParser
       end
 
       def identification
-        @identification ||= (x = @xml_data.xpath('Id')).empty? ? nil : x.first.content
+        @identification ||= @xml_data.xpath('Id').first.try(:content)
       end
 
       def generation_date

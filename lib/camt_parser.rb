@@ -1,10 +1,9 @@
 # encoding: utf-8
-
+require 'active_support/core_ext/object/try'
 require "nokogiri"
 
 require "time"
 require "bigdecimal"
-
 
 require "camt_parser/version"
 require "camt_parser/errors"
