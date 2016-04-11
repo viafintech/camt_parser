@@ -28,6 +28,37 @@ module CamtParser
       def entries
         @entries ||= @xml_data.xpath('Ntry').map{ |x| Entry.new(x) }
       end
+      alias_method :transactions, :entries
+
+      def legal_sequence_number
+        @legal_sequence_number ||= @xml_data.xpath('LglSeqNb/text()').text
+      end
+
+      def opening_balance
+        @opening_balance ||= begin
+          bal = @xml_data.xpath('Bal/Tp//Cd[contains(text(), "PRCD")]').first.ancestors('Bal')
+          date = bal.xpath('Dt/Dt/text()').text
+          currency = bal.xpath('Amt').attribute('Ccy')
+          AccountBalance.new bal.xpath('Amt/text()').text, currency, date
+        end
+      end
+
+      def closing_balance
+        @closing_balance ||= begin
+          bal = @xml_data.xpath('Bal/Tp//Cd[contains(text(), "CLBD")]').first.ancestors('Bal')
+          date = bal.xpath('Dt/Dt/text()').text
+          currency = bal.xpath('Amt').attribute('Ccy')
+          AccountBalance.new bal.xpath('Amt/text()').text, currency, date
+        end
+      end
+
+      def account_identification
+        account
+      end
+
+      def source
+        @xml_data.to_s
+      end
     end
   end
 end
