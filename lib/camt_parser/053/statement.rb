@@ -9,7 +9,7 @@ module CamtParser
 
       def initialize(xml_data)
         @identification             = (x = xml_data.xpath('Id')).empty? ? nil : x.first.content
-        @creation_date_time         = Time.parse(xml_data.xpath('CreDtTm').first.content)
+        @creation_date_time         = Time.parse(xml_data.xpath('CreDtTm/text()').text)
         @from_date_time             = (x = xml_data.xpath('FrToDt/FrDtTm')).empty? ? nil : Time.parse(x.first.content)
         @to_date_time               = (x = xml_data.xpath('FrToDt/ToDtTm')).empty? ? nil : Time.parse(x.first.content)
         @account                    = Account.new(xml_data.xpath('Acct').first)
@@ -22,13 +22,13 @@ module CamtParser
                   :additional_information
 
       def initialize(xml_data)
-        @amount     = BigDecimal.new(xml_data.xpath('Amt').first.content)
-        @currency   = xml_data.xpath('Amt/@Ccy').first.content
-        @debit      = xml_data.xpath('CdtDbtInd').first.content.upcase == 'DBIT'
-        @value_date = Date.parse(xml_data.xpath('ValDt/Dt').first.content)
+        @amount     = BigDecimal.new(xml_data.xpath('Amt/text()').text)
+        @currency   = xml_data.xpath('Amt/@Ccy').text
+        @debit      = xml_data.xpath('CdtDbtInd/text()').text.upcase == 'DBIT'
+        @value_date = Date.parse(xml_data.xpath('ValDt/Dt/text()').text)
         @creditor   = Creditor.new(xml_data.xpath('NtryDtls'))
         @debitor    = Debitor.new(xml_data.xpath('NtryDtls'))
-        @additional_information = xml_data.xpath('AddtlNtryInf').first.content
+        @additional_information = xml_data.xpath('AddtlNtryInf/text()').text
         # Makes the assumption that only unstructured remittance information will be given
         if (x = xml_data.xpath('NtryDtls/TxDtls/RmtInf/Ustrd')).empty?
           @remittance_information = nil
