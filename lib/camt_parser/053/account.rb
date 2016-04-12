@@ -9,6 +9,7 @@ module CamtParser
         @iban ||= (x = @xml_data.xpath('Id/IBAN')).empty? ? nil : x.first.content
       end
       alias_method :account_number, :iban
+      alias_method :source, :iban
 
       def bic
         @bic ||= (x = @xml_data.xpath('Svcr/FinInstnId/BIC')).empty? ? nil : x.first.content

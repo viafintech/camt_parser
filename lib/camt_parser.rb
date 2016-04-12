@@ -5,6 +5,7 @@ require "nokogiri"
 require "time"
 require "bigdecimal"
 
+require "camt_parser/misc"
 require "camt_parser/version"
 require "camt_parser/errors"
 require "camt_parser/053/account_balance"

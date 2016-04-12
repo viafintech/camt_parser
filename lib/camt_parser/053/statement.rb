@@ -34,23 +34,29 @@ module CamtParser
         @legal_sequence_number ||= @xml_data.xpath('LglSeqNb/text()').text
       end
 
+      def electronic_sequence_number
+        @electronic_sequence_number ||= @xml_data.xpath('ElctrncSeqNb/text()').text
+      end
+
       def opening_balance
         @opening_balance ||= begin
           bal = @xml_data.xpath('Bal/Tp//Cd[contains(text(), "PRCD")]').first.ancestors('Bal')
           date = bal.xpath('Dt/Dt/text()').text
           currency = bal.xpath('Amt').attribute('Ccy')
-          AccountBalance.new bal.xpath('Amt/text()').text, currency, date
+          AccountBalance.new bal.xpath('Amt/text()').text, currency, date, true
         end
       end
+      alias_method :opening_or_intermediary_balance, :opening_balance
 
       def closing_balance
         @closing_balance ||= begin
           bal = @xml_data.xpath('Bal/Tp//Cd[contains(text(), "CLBD")]').first.ancestors('Bal')
           date = bal.xpath('Dt/Dt/text()').text
           currency = bal.xpath('Amt').attribute('Ccy')
-          AccountBalance.new bal.xpath('Amt/text()').text, currency, date
+          AccountBalance.new bal.xpath('Amt/text()').text, currency, date, true
         end
       end
+      alias_method :closing_or_intermediary_balance, :closing_balance
 
       def account_identification
         account
@@ -58,6 +64,10 @@ module CamtParser
 
       def source
         @xml_data.to_s
+      end
+
+      def self.parse(xml)
+        self.new Nokogiri::XML(xml).xpath('Stmt')
       end
     end
   end

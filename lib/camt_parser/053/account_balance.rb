@@ -2,10 +2,11 @@ module CamtParser
   module Format053
     class AccountBalance
 
-      def initialize(amount, currency, date)
+      def initialize(amount, currency, date, credit = false)
         @amount = amount
         @currency = currency
         @date = date
+        @credit = credit
       end
 
       def currency
@@ -16,24 +17,20 @@ module CamtParser
         Date.parse @date
       end
 
-      def amount
-        to_amount(@amount)
+      def sign
+        credit? ? 1 : -1
       end
 
-      def sign
-        1
+      def credit?
+        @credit
+      end
+
+      def amount
+        CamtParser::Misc.to_amount(@amount)
       end
 
       def amount_in_cents
-        to_amount_in_cents(@amount)
-      end
-
-      def to_amount_in_cents(value)
-        value.gsub(/[,|\.](\d*)/) { $1.ljust(2, '0') }.to_i
-      end
-
-      def to_amount(value)
-        value.gsub(',','.').to_f
+        CamtParser::Misc.to_amount_in_cents(@amount)
       end
 
       def to_h

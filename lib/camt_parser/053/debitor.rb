@@ -6,19 +6,19 @@ module CamtParser
       end
 
       def name
-        @name ||= (x = @xml_data.xpath('TxDtls/RltdPties/Dbtr/Nm')).empty? ? nil : x.first.content
+        @name ||= @xml_data.xpath('TxDtls/RltdPties/Dbtr/Nm/text()').text
       end
 
       def iban
-        @iban ||= (x = @xml_data.xpath('TxDtls/RltdPties/DbtrAcct/Id/IBAN')).empty? ? nil : x.first.content
+        @iban ||= @xml_data.xpath('TxDtls/RltdPties/DbtrAcct/Id/IBAN/text()').text
       end
 
       def bic
-        @bic ||= (x = @xml_data.xpath('TxDtls/RltdAgts/DbtrAgt/FinInstnId/BIC')).empty? ? nil : x.first.content
+        @bic ||= @xml_data.xpath('TxDtls/RltdAgts/DbtrAgt/FinInstnId/BIC/text()').text
       end
 
       def bank_name
-        @bank_name ||= (x = @xml_data.xpath('TxDtls/RltdAgts/DbtrAgt/FinInstnId/Nm')).empty? ? nil : x.first.content
+        @bank_name ||= @xml_data.xpath('TxDtls/RltdAgts/DbtrAgt/FinInstnId/Nm/text()').text
       end
     end
   end
