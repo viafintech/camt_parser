@@ -41,7 +41,7 @@ describe CamtParser::Format053::Statement do
     end
 
     it "contains certain attributes" do
-      expect(ex_entry.amount.class).to eq(BigDecimal)
+      expect(ex_entry.amount.class).to eq(Float)
       expect(ex_entry.amount).to eq(BigDecimal.new('2'))
       expect(ex_entry.currency).to eq('EUR')
       expect(ex_entry.value_date.class).to eq(Date)
@@ -61,7 +61,7 @@ describe CamtParser::Format053::Statement do
         expect(debitor.name).to eq("Wayne Enterprises")
         expect(debitor.iban).to eq("DE24302201900609832118")
         expect(debitor.bic).to eq("DAAEDEDDXXX")
-        expect(debitor.bank_name).to eq(nil)
+        expect(debitor.bank_name).to eq("")
       end
     end
 
