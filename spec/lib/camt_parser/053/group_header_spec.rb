@@ -5,7 +5,7 @@ describe CamtParser::Format053::GroupHeader do
     camt = CamtParser::File.parse 'spec/fixtures/valid_example.xml'
     group_header = camt.group_header
     expect(group_header.class).to eq(described_class)
-    expect(group_header.message_id).to eq("ABCDEFG_YF0000_20150821A000000000")
+    expect(group_header.message_id).to eq("053D2013-12-27T22:05:03.0N130000005")
     expect(group_header.creation_date_time.class).to eq(Time)
     expect(group_header.message_pagination.class).to eq(CamtParser::Format053::MessagePagination)
     expect(group_header.additional_information).to eq(nil)

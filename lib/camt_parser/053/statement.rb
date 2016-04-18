@@ -1,76 +1,73 @@
-require 'time'
-require 'bigdecimal'
-
 module CamtParser
   module Format053
     class Statement
-      attr_reader :identification, :creation_date_time, :from_date_time, :to_date_time,
-                  :account, :entries
-
       def initialize(xml_data)
-        @identification             = (x = xml_data.xpath('Id')).empty? ? nil : x.first.content
-        @creation_date_time         = Time.parse(xml_data.xpath('CreDtTm').first.content)
-        @from_date_time             = (x = xml_data.xpath('FrToDt/FrDtTm')).empty? ? nil : Time.parse(x.first.content)
-        @to_date_time               = (x = xml_data.xpath('FrToDt/ToDtTm')).empty? ? nil : Time.parse(x.first.content)
-        @account                    = Account.new(xml_data.xpath('Acct').first)
-        @entries                    = xml_data.xpath('Ntry').map{ |x| Entry.new(x) }
+        @xml_data = xml_data
       end
-    end
 
-    class Entry
-      attr_reader :amount, :currency, :value_date, :debitor, :creditor, :remittance_information,
-                  :additional_information
+      def identification
+        @identification ||= @xml_data.xpath('Id').first.try(:content)
+      end
 
-      def initialize(xml_data)
-        @amount     = BigDecimal.new(xml_data.xpath('Amt').first.content)
-        @currency   = xml_data.xpath('Amt/@Ccy').first.content
-        @debit      = xml_data.xpath('CdtDbtInd').first.content.upcase == 'DBIT'
-        @value_date = Date.parse(xml_data.xpath('ValDt/Dt').first.content)
-        @creditor   = Creditor.new(xml_data.xpath('NtryDtls'))
-        @debitor    = Debitor.new(xml_data.xpath('NtryDtls'))
-        @additional_information = xml_data.xpath('AddtlNtryInf').first.content
-        # Makes the assumption that only unstructured remittance information will be given
-        if (x = xml_data.xpath('NtryDtls/TxDtls/RmtInf/Ustrd')).empty?
-          @remittance_information = nil
-        else
-          @remittance_information = x.collect(&:content).join(' ')
+      def generation_date
+        @generation_date ||= Time.parse(@xml_data.xpath('CreDtTm/text()').text)
+      end
+
+      def from_date_time
+        @from_date_time ||= (x = @xml_data.xpath('FrToDt/FrDtTm')).empty? ? nil : Time.parse(x.first.content)
+      end
+
+      def to_date_time
+        @to_date_time ||= (x = @xml_data.xpath('FrToDt/ToDtTm')).empty? ? nil : Time.parse(x.first.content)
+      end
+
+      def account
+        @account ||= Account.new(@xml_data.xpath('Acct').first)
+      end
+
+      def entries
+        @entries ||= @xml_data.xpath('Ntry').map{ |x| Entry.new(x) }
+      end
+      alias_method :transactions, :entries
+
+      def legal_sequence_number
+        @legal_sequence_number ||= @xml_data.xpath('LglSeqNb/text()').text
+      end
+
+      def electronic_sequence_number
+        @electronic_sequence_number ||= @xml_data.xpath('ElctrncSeqNb/text()').text
+      end
+
+      def opening_balance
+        @opening_balance ||= begin
+          bal = @xml_data.xpath('Bal/Tp//Cd[contains(text(), "PRCD")]').first.ancestors('Bal')
+          date = bal.xpath('Dt/Dt/text()').text
+          currency = bal.xpath('Amt').attribute('Ccy')
+          AccountBalance.new bal.xpath('Amt/text()').text, currency, date, true
         end
       end
+      alias_method :opening_or_intermediary_balance, :opening_balance
 
-      def debit?
-        @debit
+      def closing_balance
+        @closing_balance ||= begin
+          bal = @xml_data.xpath('Bal/Tp//Cd[contains(text(), "CLBD")]').first.ancestors('Bal')
+          date = bal.xpath('Dt/Dt/text()').text
+          currency = bal.xpath('Amt').attribute('Ccy')
+          AccountBalance.new bal.xpath('Amt/text()').text, currency, date, true
+        end
       end
-    end
+      alias_method :closing_or_intermediary_balance, :closing_balance
 
-    class Account
-      attr_reader :iban, :bic, :bank_name
-
-      def initialize(xml_data)
-        @iban           = (x = xml_data.xpath('Id/IBAN')).empty? ? nil : x.first.content
-        @bic            = (x = xml_data.xpath('Svcr/FinInstnId/BIC')).empty? ? nil : x.first.content
-        @bank_name      = (x = xml_data.xpath('Svcr/FinInstnId/Nm')).empty? ? nil : x.first.content
+      def account_identification
+        account
       end
-    end
 
-    class Debitor
-      attr_reader :iban, :bic, :bank_name, :name
-
-      def initialize(xml_data)
-        @name       = (x = xml_data.xpath('TxDtls/RltdPties/Dbtr/Nm')).empty? ? nil : x.first.content
-        @iban       = (x = xml_data.xpath('TxDtls/RltdPties/DbtrAcct/Id/IBAN')).empty? ? nil : x.first.content
-        @bic        = (x = xml_data.xpath('TxDtls/RltdAgts/DbtrAgt/FinInstnId/BIC')).empty? ? nil : x.first.content
-        @bank_name  = (x = xml_data.xpath('TxDtls/RltdAgts/DbtrAgt/FinInstnId/Nm')).empty? ? nil : x.first.content
+      def source
+        @xml_data.to_s
       end
-    end
 
-    class Creditor
-      attr_reader :iban, :bic, :bank_name, :name
-
-      def initialize(xml_data)
-        @name       = (x = xml_data.xpath('TxDtls/RltdPties/Cdtr/Nm')).empty? ? nil : x.first.content
-        @iban       = (x = xml_data.xpath('TxDtls/RltdPties/CdtrAcct/Id/IBAN')).empty? ? nil : x.first.content
-        @bic        = (x = xml_data.xpath('TxDtls/RltdAgts/CdtrAgt/FinInstnId/BIC')).empty? ? nil : x.first.content
-        @bank_name  = (x = xml_data.xpath('TxDtls/RltdAgts/CdtrAgt/FinInstnId/Nm')).empty? ? nil : x.first.content
+      def self.parse(xml)
+        self.new Nokogiri::XML(xml).xpath('Stmt')
       end
     end
   end
