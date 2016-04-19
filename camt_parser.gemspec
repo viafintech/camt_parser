@@ -25,5 +25,4 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rspec_junit_formatter", "~> 0.2.2"
 
   spec.add_runtime_dependency "nokogiri"
-  spec.add_runtime_dependency "activesupport"
 end

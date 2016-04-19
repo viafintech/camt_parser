@@ -16,4 +16,6 @@ describe CamtParser::Format053::Statement do
 
   specify { expect(ex_stmt.opening_balance).to be_kind_of(CamtParser::Format053::AccountBalance) }
   specify { expect(ex_stmt.closing_balance).to be_kind_of(CamtParser::Format053::AccountBalance) }
+
+  specify { expect(ex_stmt.identification).to eq("0352C5320131227220503") }
 end
