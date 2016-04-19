@@ -8,8 +8,8 @@ describe CamtParser::Format053::Creditor do
   let(:ex_entry) { ex_stmt.entries[0] }
   let(:creditor) { ex_entry.creditor }
 
-  it { expect(creditor.name).to eq("Testkonto Nummer 2") }
-  it { expect(creditor.iban).to eq("DE09300606010012345671") }
-  it { expect(creditor.bic).to eq("DAAEDEDDXXX") }
-  it { expect(creditor.bank_name).to eq("Bank") }
+  specify { expect(creditor.name).to eq("Testkonto Nummer 2") }
+  specify { expect(creditor.iban).to eq("DE09300606010012345671") }
+  specify { expect(creditor.bic).to eq("DAAEDEDDXXX") }
+  specify { expect(creditor.bank_name).to eq("Bank") }
 end
