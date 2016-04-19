@@ -9,7 +9,7 @@ module CamtParser
         @message_id             = xml_data.xpath('MsgId/text()').text
         @creation_date_time     = Time.parse(xml_data.xpath('CreDtTm/text()').text)
         @message_pagination     = (x = xml_data.xpath('MsgPgntn')).empty? ? nil : MessagePagination.new(x)
-        @additional_information = (x = xml_data.xpath('AddtlInf')).empty? ? nil : x.first.content
+        @additional_information = xml_data.xpath('AddtlInf/text()').text
       end
     end
 
