@@ -85,28 +85,28 @@ module CamtParser
         @reference ||= @xml_data.xpath('NtryDtls/TxDtls/Refs/InstrId/text()').text
       end
 
-      def bank_reference
+      def bank_reference # May be missing
         @bank_reference ||= @xml_data.xpath('NtryDtls/TxDtls/Refs/AcctSvcrRef/text()').text
       end
 
-      def eref
-        @eref ||= @xml_data.xpath('NtryDtls/TxDtls/Refs/EndToEndId/text()').text
+      def end_to_end_reference # May be missing
+        @end_to_end_reference ||= @xml_data.xpath('NtryDtls/TxDtls/Refs/EndToEndId/text()').text
       end
 
-      def mref
-        @mref ||= @xml_data.xpath('NtryDtls/TxDtls/Refs/MndtId/text()').text
+      def mandate_reference # May be missing
+        @mandate_reference ||= @xml_data.xpath('NtryDtls/TxDtls/Refs/MndtId/text()').text
       end
 
-      def transaction_id
+      def transaction_id # May be missing
         @transaction_id ||= @xml_data.xpath('NtryDtls/TxDtls/Refs/TxId/text()').text
       end
 
-      def creditor_identifier
+      def creditor_identifier # May be missing
         @creditor_identifier ||= @xml_data.xpath('NtryDtls/TxDtls/RltdPties/Cdtr/Id/PrvtId/Othr/Id/text()').text
       end
 
-      def information
-        @information ||= @xml_data.xpath('NtryDtls/TxDtls/Refs/PmtInfId/text()').text
+      def payment_information # May be missing
+        @payment_information ||= @xml_data.xpath('NtryDtls/TxDtls/Refs/PmtInfId/text()').text
       end
     end
   end

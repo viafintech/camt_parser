@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe CamtParser::Format053::GroupHeader do
-  let(:camt) { CamtParser::File.parse 'spec/fixtures/valid_example.xml' }
+  let(:camt) { CamtParser::File.parse 'spec/fixtures/053/valid_example.xml' }
   let(:group_header) { camt.group_header }
 
   specify { expect(group_header).to be_kind_of(described_class) }
@@ -12,7 +12,7 @@ describe CamtParser::Format053::GroupHeader do
 end
 
 describe CamtParser::Format053::MessagePagination do
-  let(:camt) { CamtParser::File.parse 'spec/fixtures/valid_example.xml' }
+  let(:camt) { CamtParser::File.parse 'spec/fixtures/053/valid_example.xml' }
   let(:message_pagination) { camt.group_header.message_pagination }
 
   specify { expect(message_pagination).to be_kind_of(described_class) }

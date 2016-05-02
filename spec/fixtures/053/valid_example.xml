@@ -71,6 +71,13 @@
       <BkTxCd/>
       <NtryDtls>
         <TxDtls>
+          <Refs>
+            <AcctSvcrRef>BankReference</AcctSvcrRef>
+            <EndToEndId>EndToEndReference</EndToEndId>
+            <MndtId>MandateReference</MndtId>
+            <PmtInfId>PaymentIdentification</PmtInfId>
+            <TxId>UniqueTransactionId</TxId>
+          </Refs>
           <BkTxCd>
             <Prtry>
               <Cd>NTRF+020</Cd>
@@ -87,6 +94,13 @@
               </Id>
             </DbtrAcct>
             <Cdtr>
+              <Id>
+                <PrvtId>
+                  <Othr>
+                    <Id>CreditorIdentifier</Id>
+                  </Othr>
+                </PrvtId>
+              </Id>
               <Nm>Testkonto Nummer 2</Nm>
               <PstlAdr>
                 <AdrLine>Berlin</AdrLine>
