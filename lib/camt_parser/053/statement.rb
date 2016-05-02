@@ -24,12 +24,10 @@ module CamtParser
       def account
         @account ||= Account.new(@xml_data.xpath('Acct').first)
       end
-      alias_method :account_identification, :account
 
       def entries
         @entries ||= @xml_data.xpath('Ntry').map{ |x| Entry.new(x) }
       end
-      alias_method :transactions, :entries
 
       def legal_sequence_number
         @legal_sequence_number ||= @xml_data.xpath('LglSeqNb/text()').text

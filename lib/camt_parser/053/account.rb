@@ -8,8 +8,6 @@ module CamtParser
       def iban
         @iban ||= @xml_data.xpath('Id/IBAN/text()').text
       end
-      alias_method :account_number, :iban
-      alias_method :source, :iban
 
       def bic
         @bic ||= @xml_data.xpath('Svcr/FinInstnId/BIC/text()').text

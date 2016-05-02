@@ -25,12 +25,10 @@ module CamtParser
       def value_date
         @value_date ||= Date.parse(@xml_data.xpath('ValDt/Dt/text()').text)
       end
-      alias_method :date, :value_date
 
       def booking_date
         @booking_date ||= Date.parse(@xml_data.xpath('BookgDt/Dt/text()').text)
       end
-      alias_method :entry_date, :booking_date
 
       def creditor
         @creditor ||= Creditor.new(@xml_data.xpath('NtryDtls'))
@@ -66,7 +64,6 @@ module CamtParser
           end
         end
       end
-      alias_method :svwz, :remittance_information
 
       def name
         credit? ? debitor.name : creditor.name
