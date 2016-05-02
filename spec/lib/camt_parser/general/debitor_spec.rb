@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe CamtParser::Format053::Debitor do
+describe CamtParser::Debitor do
   let(:camt)       { CamtParser::File.parse('spec/fixtures/053/valid_example.xml') }
   let(:statements) { camt.statements }
   let(:ex_stmt)    { camt.statements[0] }

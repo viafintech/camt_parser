@@ -7,7 +7,7 @@ describe CamtParser::Format053::Base do
       CamtParser::File.parse 'spec/fixtures/053/valid_example.xml'
     end
 
-    specify { expect(CamtParser::Format053::GroupHeader).to receive(:new).and_call_original }
+    specify { expect(CamtParser::GroupHeader).to receive(:new).and_call_original }
     specify { expect(CamtParser::Format053::Statement).to receive(:new).and_call_original }
   end
 

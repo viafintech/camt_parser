@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe CamtParser::Format053::Entry do
+describe CamtParser::Entry do
   let(:camt)       { CamtParser::File.parse('spec/fixtures/053/valid_example.xml') }
   let(:statements) { camt.statements }
   let(:ex_stmt)    { camt.statements[0] }
@@ -20,8 +20,8 @@ describe CamtParser::Format053::Entry do
   specify { expect(ex_entry.value_date).to eq(Date.new(2013, 12, 27)) }
   specify { expect(ex_entry.booking_date).to be_kind_of(Date) }
   specify { expect(ex_entry.booking_date).to eq(Date.new(2013, 12, 27)) }
-  specify { expect(ex_entry.creditor).to be_kind_of(CamtParser::Format053::Creditor) }
-  specify { expect(ex_entry.debitor).to be_kind_of(CamtParser::Format053::Debitor) }
+  specify { expect(ex_entry.creditor).to be_kind_of(CamtParser::Creditor) }
+  specify { expect(ex_entry.debitor).to be_kind_of(CamtParser::Debitor) }
   specify { expect(ex_entry.remittance_information).to eq("TEST BERWEISUNG MITTELS BLZUND KONTONUMMER - DTA") }
   specify { expect(ex_entry.additional_information).to eq("Überweisungs-Gutschrift; GVC: SEPA Credit Transfer (Einzelbuchung-Haben)") }
   specify { expect(ex_entry.description).to eq(ex_entry.additional_information) }
