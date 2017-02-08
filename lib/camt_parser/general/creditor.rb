@@ -5,19 +5,19 @@ module CamtParser
     end
 
     def name
-      @name ||= @xml_data.xpath('TxDtls/RltdPties/Cdtr/Nm/text()').text
+      @name ||= @xml_data.xpath('RltdPties/Cdtr/Nm/text()').text
     end
 
     def iban
-      @iban ||= @xml_data.xpath('TxDtls/RltdPties/CdtrAcct/Id/IBAN/text()').text
+      @iban ||= @xml_data.xpath('RltdPties/CdtrAcct/Id/IBAN/text()').text
     end
 
     def bic
-      @bic ||= @xml_data.xpath('TxDtls/RltdAgts/CdtrAgt/FinInstnId/BIC/text()').text
+      @bic ||= @xml_data.xpath('RltdAgts/CdtrAgt/FinInstnId/BIC/text()').text
     end
 
     def bank_name
-      @bank_name ||= @xml_data.xpath('TxDtls/RltdAgts/CdtrAgt/FinInstnId/Nm/text()').text
+      @bank_name ||= @xml_data.xpath('RltdAgts/CdtrAgt/FinInstnId/Nm/text()').text
     end
   end
 end

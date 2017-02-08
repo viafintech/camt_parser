@@ -29,16 +29,12 @@ module CamtParser
       @booking_date ||= Date.parse(@xml_data.xpath('BookgDt/Dt/text()').text)
     end
 
-    def creditor
-      @creditor ||= CamtParser::Creditor.new(@xml_data.xpath('NtryDtls'))
+    def transactions
+      @transactions ||= parse_transactions
     end
 
     def credit?
       !debit
-    end
-
-    def debitor
-      @debitor ||= CamtParser::Debitor.new(@xml_data.xpath('NtryDtls'))
     end
 
     def debit?
@@ -54,58 +50,20 @@ module CamtParser
     end
     alias_method :description, :additional_information
 
-    def remittance_information
-      @remittance_information ||= begin
-        if (x = @xml_data.xpath('NtryDtls/TxDtls/RmtInf/Ustrd')).empty?
-          nil
-        else
-          x.collect(&:content).join(' ')
-        end
+    private
+
+    def parse_transactions
+      transaction_details = @xml_data.xpath('NtryDtls/TxDtls')
+
+      amt = nil
+      ccy = nil
+
+      if transaction_details.length == 1
+        amt = @xml_data.xpath('Amt/text()').text
+        ccy = @xml_data.xpath('Amt/@Ccy').text
       end
-    end
 
-    def name
-      credit? ? debitor.name : creditor.name
-    end
-
-    def iban
-      credit? ? debitor.iban : creditor.iban
-    end
-
-    def bic
-      credit? ? debitor.bic : creditor.bic
-    end
-
-    def swift_code
-      @swift_code ||= @xml_data.xpath('NtryDtls/TxDtls/BkTxCd/Prtry/Cd/text()').text.split('+')[0]
-    end
-
-    def reference
-      @reference ||= @xml_data.xpath('NtryDtls/TxDtls/Refs/InstrId/text()').text
-    end
-
-    def bank_reference # May be missing
-      @bank_reference ||= @xml_data.xpath('NtryDtls/TxDtls/Refs/AcctSvcrRef/text()').text
-    end
-
-    def end_to_end_reference # May be missing
-      @end_to_end_reference ||= @xml_data.xpath('NtryDtls/TxDtls/Refs/EndToEndId/text()').text
-    end
-
-    def mandate_reference # May be missing
-      @mandate_reference ||= @xml_data.xpath('NtryDtls/TxDtls/Refs/MndtId/text()').text
-    end
-
-    def transaction_id # May be missing
-      @transaction_id ||= @xml_data.xpath('NtryDtls/TxDtls/Refs/TxId/text()').text
-    end
-
-    def creditor_identifier # May be missing
-      @creditor_identifier ||= @xml_data.xpath('NtryDtls/TxDtls/RltdPties/Cdtr/Id/PrvtId/Othr/Id/text()').text
-    end
-
-    def payment_information # May be missing
-      @payment_information ||= @xml_data.xpath('NtryDtls/TxDtls/Refs/PmtInfId/text()').text
+      @xml_data.xpath('NtryDtls/TxDtls').map { |x| Transaction.new(x, debit?, amt, ccy) }
     end
   end
 end
