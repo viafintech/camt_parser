@@ -5,7 +5,7 @@ describe CamtParser::Misc do
   let(:comma_value) { "30,12" }
 
   context '#to_amount_in_cents' do
-    specify { expect(described_class.to_amount_in_cents(dot_value)).to be_kind_of(Fixnum) }
+    specify { expect(described_class.to_amount_in_cents(dot_value)).to be_kind_of(Integer) }
     specify { expect(described_class.to_amount_in_cents(dot_value)).to eq(3012) }
     specify { expect(described_class.to_amount_in_cents(comma_value)).to eq(3012) }
   end
