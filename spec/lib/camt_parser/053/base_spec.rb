@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe CamtParser::Format053::Base do
 
-  context 'v2' do
+  context 'version 2' do
     context 'initialization' do
       after do
         CamtParser::File.parse 'spec/fixtures/053/valid_example.xml'
@@ -17,7 +17,7 @@ describe CamtParser::Format053::Base do
     specify { expect(camt.statements).to_not eq([]) }
   end
 
-  context 'v4' do
+  context 'version 4' do
     context 'initialization' do
       after do
         CamtParser::File.parse 'spec/fixtures/053/valid_example_v4.xml'
