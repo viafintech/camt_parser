@@ -39,7 +39,7 @@ module CamtParser
 
       def opening_balance
         @opening_balance ||= begin
-          bal = @xml_data.xpath('Bal/Tp//Cd[contains(text(), "PRCD")]').first.ancestors('Bal')
+          bal = @xml_data.xpath('Bal/Tp//Cd[contains(text(), "OPBD") or contains(text(), "PRCD")]').first.ancestors('Bal')
           date = bal.xpath('Dt/Dt/text()').text
           currency = bal.xpath('Amt').attribute('Ccy').value
           AccountBalance.new bal.xpath('Amt/text()').text, currency, date, true
