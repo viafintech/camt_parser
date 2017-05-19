@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe CamtParser::Format053::Statement do
-  context 'v2' do
+  context 'version 2' do
     let(:camt)       { CamtParser::File.parse('spec/fixtures/053/valid_example.xml') }
     let(:statements) { camt.statements }
     let(:ex_stmt)    { camt.statements[0] }
@@ -21,7 +21,7 @@ describe CamtParser::Format053::Statement do
     specify { expect(ex_stmt.identification).to eq("0352C5320131227220503") }
   end
 
-  context 'v4' do
+  context 'version 4' do
     let(:camt)          { CamtParser::File.parse('spec/fixtures/053/valid_example_v4.xml') }
     let(:statements)    { camt.statements }
     let(:ex_stmt)       { camt.statements[0] }

@@ -3,8 +3,8 @@ module CamtParser
     def initialize(xml_data, debit, amount = nil, currency = nil)
       @xml_data = xml_data
       @debit    = debit
-      @amount   = amount   || @xml_data.xpath('AmtDtls/TxAmt/Amt/text()').text
-      @currency = currency || @xml_data.xpath('AmtDtls/TxAmt/Amt/@Ccy').text
+      @amount   = parse_amount || amount
+      @currency = parse_currency || currency
     end
 
     def amount
@@ -95,6 +95,28 @@ module CamtParser
 
     def payment_information # May be missing
       @payment_information ||= @xml_data.xpath('Refs/PmtInfId/text()').text
+    end
+
+    private
+
+    def parse_amount
+      @amount = if @xml_data.xpath('Amt').any?
+        @xml_data.xpath('Amt/text()').text
+      elsif @xml_data.xpath('AmtDtls').any?
+        @xml_data.xpath('AmtDtls/TxAmt/Amt/text()').text
+      else
+        nil
+      end
+    end
+
+    def parse_currency
+      @currenty = if @xml_data.xpath('Amt').any?
+        @xml_data.xpath('Amt/@Ccy').text
+      elsif @xml_data.xpath('AmtDtls').any?
+        @xml_data.xpath('AmtDtls/TxAmt/Amt/@Ccy').text
+      else
+        nil
+      end
     end
   end
 end
