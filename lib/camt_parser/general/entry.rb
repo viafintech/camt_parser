@@ -45,6 +45,14 @@ module CamtParser
       credit? ? 1 : -1
     end
 
+    def reversal?
+      @reversal ||= @xml_data.xpath('RvslInd/text()').text.downcase == 'true'
+    end
+
+    def booked?
+      @booked ||= @xml_data.xpath('Sts/text()').text.upcase == 'BOOK'
+    end
+
     def additional_information
       @additional_information ||= @xml_data.xpath('AddtlNtryInf/text()').text
     end
