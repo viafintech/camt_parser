@@ -1,0 +1,2131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:camt.053.001.04" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:camt.053.001.04 camt.053.001.04.xsd">
+  <BkToCstmrStmt>
+    <GrpHdr>
+      <MsgId>20160430375204000008573</MsgId>
+      <CreDtTm>2016-04-30T11:50:00</CreDtTm>
+      <MsgPgntn>
+        <PgNb>1</PgNb>
+        <LastPgInd>true</LastPgInd>
+      </MsgPgntn>
+      <AddtlInf>Productive</AddtlInf>
+    </GrpHdr>
+    <Stmt>
+      <Id>20160430375204000008574</Id>
+      <ElctrncSeqNb>85</ElctrncSeqNb>
+      <CreDtTm>2016-04-30T11:50:00</CreDtTm>
+      <FrToDt>
+        <FrDtTm>2016-04-30T00:00:00</FrDtTm>
+        <ToDtTm>2016-04-30T23:59:59</ToDtTm>
+      </FrToDt>
+      <Acct>
+        <Id>
+          <IBAN>CH0309000000250090342</IBAN>
+        </Id>
+        <Ownr>
+          <Nm>Robert Schneider SA Grands magasins Biel/Bienne</Nm>
+        </Ownr>
+      </Acct>
+      <Bal>
+        <Tp>
+          <CdOrPrtry>
+            <Cd>OPBD</Cd>
+          </CdOrPrtry>
+        </Tp>
+        <Amt Ccy="CHF">322152.16</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt>
+          <Dt>2016-04-29</Dt>
+        </Dt>
+      </Bal>
+      <Bal>
+        <Tp>
+          <CdOrPrtry>
+            <Cd>CLBD</Cd>
+          </CdOrPrtry>
+        </Tp>
+        <Amt Ccy="CHF">322689.77</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt>
+          <Dt>2016-04-30</Dt>
+        </Dt>
+      </Bal>
+      <Ntry>
+        <Amt Ccy="CHF">24.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <RvslInd>false</RvslInd>
+        <Sts>BOOK</Sts>
+        <BookgDt>
+          <Dt>2016-04-30</Dt>
+        </BookgDt>
+        <ValDt>
+          <Dt>2016-04-30</Dt>
+        </ValDt>
+        <AcctSvcrRef>20160401001027080060699001000107</AcctSvcrRef>
+        <BkTxCd>
+          <Domn>
+            <Cd>ACMT</Cd>
+            <Fmly>
+              <Cd>ADOP</Cd>
+              <SubFmlyCd>CHRG</SubFmlyCd>
+            </Fmly>
+          </Domn>
+        </BkTxCd>
+        <NtryDtls>
+          <TxDtls>
+            <Refs>
+              <AcctSvcrRef>20160401001027080060699001000107</AcctSvcrRef>
+            </Refs>
+            <Amt Ccy="CHF">24.00</Amt>
+            <CdtDbtInd>DBIT</CdtDbtInd>
+          </TxDtls>
+        </NtryDtls>
+        <AddtlNtryInf>UEBRIGE: 25-9034-2 FÜR KONTOAUSZUG PAPIER TÄGLICH</AddtlNtryInf>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="CHF">328.75</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <RvslInd>false</RvslInd>
+        <Sts>BOOK</Sts>
+        <BookgDt>
+          <Dt>2016-04-30</Dt>
+        </BookgDt>
+        <ValDt>
+          <Dt>2016-04-30</Dt>
+        </ValDt>
+        <AcctSvcrRef>20160430001001080060699000901107</AcctSvcrRef>
+        <BkTxCd>
+          <Domn>
+            <Cd>PMNT</Cd>
+            <Fmly>
+              <Cd>RCDT</Cd>
+              <SubFmlyCd>CHRG</SubFmlyCd>
+            </Fmly>
+          </Domn>
+        </BkTxCd>
+        <NtryDtls>
+          <TxDtls>
+            <Refs>
+              <AcctSvcrRef>20160430001001080060699000901107</AcctSvcrRef>
+            </Refs>
+            <Amt Ccy="CHF">328.75</Amt>
+            <CdtDbtInd>DBIT</CdtDbtInd>
+          </TxDtls>
+        </NtryDtls>
+        <AddtlNtryInf>UEBRIGE: 25-9034-2 FÜR EINZAHLUNGEN AM SCHALTER ES</AddtlNtryInf>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="CHF">200.80</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <RvslInd>false</RvslInd>
+        <Sts>BOOK</Sts>
+        <BookgDt>
+          <Dt>2016-04-30</Dt>
+        </BookgDt>
+        <ValDt>
+          <Dt>2016-04-30</Dt>
+        </ValDt>
+        <AcctSvcrRef>20160430001001080060699015801107</AcctSvcrRef>
+        <BkTxCd>
+          <Domn>
+            <Cd>PMNT</Cd>
+            <Fmly>
+              <Cd>RCDT</Cd>
+              <SubFmlyCd>CHRG</SubFmlyCd>
+            </Fmly>
+          </Domn>
+        </BkTxCd>
+        <NtryDtls>
+          <TxDtls>
+            <Refs>
+              <AcctSvcrRef>20160430001001080060699015801107</AcctSvcrRef>
+            </Refs>
+            <Amt Ccy="CHF">200.80</Amt>
+            <CdtDbtInd>DBIT</CdtDbtInd>
+          </TxDtls>
+        </NtryDtls>
+        <AddtlNtryInf>UEBRIGE: 25-9034-2 FÜR GUTSCHRIFT ES VOLLERFASST</AddtlNtryInf>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="CHF">638.15</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <RvslInd>false</RvslInd>
+        <Sts>BOOK</Sts>
+        <BookgDt>
+          <Dt>2016-04-30</Dt>
+        </BookgDt>
+        <ValDt>
+          <Dt>2016-04-30</Dt>
+        </ValDt>
+        <AcctSvcrRef>20160430001025080060699000000012</AcctSvcrRef>
+        <BkTxCd>
+          <Domn>
+            <Cd>PMNT</Cd>
+            <Fmly>
+              <Cd>RCDT</Cd>
+              <SubFmlyCd>CHRG</SubFmlyCd>
+            </Fmly>
+          </Domn>
+        </BkTxCd>
+        <NtryDtls>
+          <TxDtls>
+            <Refs>
+              <AcctSvcrRef>20160430001025080060699000000012</AcctSvcrRef>
+            </Refs>
+            <Amt Ccy="CHF">638.15</Amt>
+            <CdtDbtInd>DBIT</CdtDbtInd>
+          </TxDtls>
+        </NtryDtls>
+        <AddtlNtryInf>ESR-TEILNEHMERNUMMER: 01-000000-4 FÜR EINZAHLUNGEN AM SCHALTER ESR</AddtlNtryInf>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="CHF">24.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <RvslInd>false</RvslInd>
+        <Sts>BOOK</Sts>
+        <BookgDt>
+          <Dt>2016-04-30</Dt>
+        </BookgDt>
+        <ValDt>
+          <Dt>2016-04-30</Dt>
+        </ValDt>
+        <AcctSvcrRef>20160430001025080060699000000031</AcctSvcrRef>
+        <BkTxCd>
+          <Domn>
+            <Cd>PMNT</Cd>
+            <Fmly>
+              <Cd>RCDT</Cd>
+              <SubFmlyCd>CHRG</SubFmlyCd>
+            </Fmly>
+          </Domn>
+        </BkTxCd>
+        <NtryDtls>
+          <TxDtls>
+            <Refs>
+              <AcctSvcrRef>20160430001025080060699000000031</AcctSvcrRef>
+            </Refs>
+            <Amt Ccy="CHF">24.00</Amt>
+            <CdtDbtInd>DBIT</CdtDbtInd>
+          </TxDtls>
+        </NtryDtls>
+        <AddtlNtryInf>ESR-TEILNEHMERNUMMER: 01-000000-4 FÜR REJECTBEHANDLUNG ESR DES VORMONATS</AddtlNtryInf>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="CHF">35.72</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <RvslInd>false</RvslInd>
+        <Sts>BOOK</Sts>
+        <BookgDt>
+          <Dt>2016-04-30</Dt>
+        </BookgDt>
+        <ValDt>
+          <Dt>2016-04-30</Dt>
+        </ValDt>
+        <AcctSvcrRef>20160430001025080060699000010012</AcctSvcrRef>
+        <BkTxCd>
+          <Domn>
+            <Cd>PMNT</Cd>
+            <Fmly>
+              <Cd>RCDT</Cd>
+              <SubFmlyCd>CHRG</SubFmlyCd>
+            </Fmly>
+          </Domn>
+        </BkTxCd>
+        <NtryDtls>
+          <TxDtls>
+            <Refs>
+              <AcctSvcrRef>20160430001025080060699000010012</AcctSvcrRef>
+            </Refs>
+            <Amt Ccy="CHF">35.72</Amt>
+            <CdtDbtInd>DBIT</CdtDbtInd>
+          </TxDtls>
+        </NtryDtls>
+        <AddtlNtryInf>ESR-TEILNEHMERNUMMER: 01-000000-4 FÜR NACHBEARBEITUNG ESR+</AddtlNtryInf>
+      </Ntry>
+      <Ntry>
+        <NtryRef>010000004</NtryRef>
+        <Amt Ccy="CHF">1000.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <RvslInd>false</RvslInd>
+        <Sts>BOOK</Sts>
+        <BookgDt>
+          <Dt>2016-05-27</Dt>
+        </BookgDt>
+        <ValDt>
+          <Dt>2016-05-30</Dt>
+        </ValDt>
+        <AcctSvcrRef>20160530007602769939022000000012</AcctSvcrRef>
+        <BkTxCd>
+          <Domn>
+            <Cd>PMNT</Cd>
+            <Fmly>
+              <Cd>RCDT</Cd>
+              <SubFmlyCd>VCOM</SubFmlyCd>
+            </Fmly>
+          </Domn>
+        </BkTxCd>
+        <Chrgs>
+          <TtlChrgsAndTaxAmt Ccy="CHF">5.20</TtlChrgsAndTaxAmt>
+          <Rcrd>
+            <Amt Ccy="CHF">5.40</Amt>
+            <CdtDbtInd>DBIT</CdtDbtInd>
+            <ChrgInclInd>false</ChrgInclInd>
+            <Tp>
+              <Prtry>
+                <Id>2</Id>
+              </Prtry>
+            </Tp>
+          </Rcrd>
+          <Rcrd>
+            <Amt Ccy="CHF">0.20</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <ChrgInclInd>true</ChrgInclInd>
+            <Tp>
+              <Cd>DISC</Cd>
+            </Tp>
+          </Rcrd>
+        </Chrgs>
+        <NtryDtls>
+          <Btch>
+            <NbOfTxs>10</NbOfTxs>
+          </Btch>
+          <TxDtls>
+            <Refs>
+              <AcctSvcrRef>160527CH00T3L0GE</AcctSvcrRef>
+              <Prtry>
+                <Tp>04</Tp>
+                <Ref>20160526531801000100274</Ref>
+              </Prtry>
+            </Refs>
+            <Amt Ccy="CHF">100.00</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <BkTxCd>
+              <Domn>
+                <Cd>PMNT</Cd>
+                <Fmly>
+                  <Cd>CNTR</Cd>
+                  <SubFmlyCd>CDPT</SubFmlyCd>
+                </Fmly>
+              </Domn>
+            </BkTxCd>
+            <Chrgs>
+              <TtlChrgsAndTaxAmt Ccy="CHF">1.24</TtlChrgsAndTaxAmt>
+              <Rcrd>
+                <Amt Ccy="CHF">1.20</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <ChrgInclInd>false</ChrgInclInd>
+                <Tp>
+                  <Prtry>
+                    <Id>2</Id>
+                  </Prtry>
+                </Tp>
+              </Rcrd>
+              <Rcrd>
+                <Amt Ccy="CHF">0.04</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <ChrgInclInd>false</ChrgInclInd>
+                <Tp>
+                  <Prtry>
+                    <Id>4</Id>
+                  </Prtry>
+                </Tp>
+              </Rcrd>
+            </Chrgs>
+            <RltdAgts>
+              <DbtrAgt>
+                <FinInstnId>
+                  <BICFI>POFICHBEXXX</BICFI>
+                  <Nm>POSTFINANCE AG</Nm>
+                  <PstlAdr>
+                    <AdrLine>MINGERSTRASSE 20</AdrLine>
+                    <AdrLine>3030 BERNE</AdrLine>
+                  </PstlAdr>
+                </FinInstnId>
+              </DbtrAgt>
+            </RltdAgts>
+            <RmtInf>
+              <Strd>
+                <CdtrRefInf>
+                  <Tp>
+                    <CdOrPrtry>
+                      <Prtry>ISR Reference</Prtry>
+                    </CdOrPrtry>
+                  </Tp>
+                  <Ref>000000000002015110002913192</Ref>
+                </CdtrRefInf>
+                <AddtlRmtInf>?REJECT?0</AddtlRmtInf>
+              </Strd>
+            </RmtInf>
+            <RltdDts>
+              <AccptncDtTm>2016-05-26T20:00:00</AccptncDtTm>
+            </RltdDts>
+          </TxDtls>
+          <TxDtls>
+            <Refs>
+              <AcctSvcrRef>160527CH00T3KWWA</AcctSvcrRef>
+              <Prtry>
+                <Tp>01</Tp>
+                <Ref>160527CH00T3KWWA</Ref>
+              </Prtry>
+            </Refs>
+            <Amt Ccy="CHF">50.00</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <BkTxCd>
+              <Domn>
+                <Cd>PMNT</Cd>
+                <Fmly>
+                  <Cd>RCDT</Cd>
+                  <SubFmlyCd>AUTT</SubFmlyCd>
+                </Fmly>
+              </Domn>
+            </BkTxCd>
+            <RltdPties>
+              <Dbtr>
+                <Nm>Rutschmann Pia</Nm>
+                <PstlAdr>
+                  <StrtNm>Marktgasse</StrtNm>
+                  <BldgNb>28</BldgNb>
+                  <PstCd>9400</PstCd>
+                  <TwnNm>Rorschach</TwnNm>
+                  <Ctry>CH</Ctry>
+                </PstlAdr>
+              </Dbtr>
+            </RltdPties>
+            <RltdAgts>
+              <DbtrAgt>
+                <FinInstnId>
+                  <BICFI>POFICHBEXXX</BICFI>
+                  <Nm>POSTFINANCE AG</Nm>
+                  <PstlAdr>
+                    <AdrLine>MINGERSTRASSE 20</AdrLine>
+                    <AdrLine>3030 BERNE</AdrLine>
+                  </PstlAdr>
+                </FinInstnId>
+              </DbtrAgt>
+            </RltdAgts>
+            <RmtInf>
+              <Strd>
+                <CdtrRefInf>
+                  <Tp>
+                    <CdOrPrtry>
+                      <Prtry>ISR Reference</Prtry>
+                    </CdOrPrtry>
+                  </Tp>
+                  <Ref>000000000002016030002820804</Ref>
+                </CdtrRefInf>
+                <AddtlRmtInf>?REJECT?0</AddtlRmtInf>
+              </Strd>
+            </RmtInf>
+            <RltdDts>
+              <AccptncDtTm>2016-05-27T20:00:00</AccptncDtTm>
+            </RltdDts>
+          </TxDtls>
+          <TxDtls>
+            <Refs>
+              <AcctSvcrRef>160527CH00T2H28C</AcctSvcrRef>
+              <Prtry>
+                <Tp>01</Tp>
+                <Ref>160527CH00T2H28C</Ref>
+              </Prtry>
+            </Refs>
+            <Amt Ccy="CHF">200.00</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <BkTxCd>
+              <Domn>
+                <Cd>PMNT</Cd>
+                <Fmly>
+                  <Cd>RCDT</Cd>
+                  <SubFmlyCd>ATXN</SubFmlyCd>
+                </Fmly>
+              </Domn>
+            </BkTxCd>
+            <RltdAgts>
+              <DbtrAgt>
+                <FinInstnId>
+                  <ClrSysMmbId>
+                    <MmbId>000048358</MmbId>
+                  </ClrSysMmbId>
+                  <Nm>Credit Suisse AG</Nm>
+                  <PstlAdr>
+                    <AdrLine>Paradeplatz 8</AdrLine>
+                    <AdrLine>8070 Zürich</AdrLine>
+                  </PstlAdr>
+                </FinInstnId>
+              </DbtrAgt>
+            </RltdAgts>
+            <RmtInf>
+              <Strd>
+                <CdtrRefInf>
+                  <Tp>
+                    <CdOrPrtry>
+                      <Prtry>ISR Reference</Prtry>
+                    </CdOrPrtry>
+                  </Tp>
+                  <Ref>000000000002016030001581632</Ref>
+                </CdtrRefInf>
+                <AddtlRmtInf>?REJECT?0</AddtlRmtInf>
+              </Strd>
+            </RmtInf>
+            <RltdDts>
+              <AccptncDtTm>2016-05-27T20:00:00</AccptncDtTm>
+            </RltdDts>
+          </TxDtls>
+          <TxDtls>
+            <Refs>
+              <AcctSvcrRef>160527CH00T3L0W5</AcctSvcrRef>
+              <Prtry>
+                <Tp>04</Tp>
+                <Ref>20160526838805000100263</Ref>
+              </Prtry>
+            </Refs>
+            <Amt Ccy="CHF">50.00</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <BkTxCd>
+              <Domn>
+                <Cd>PMNT</Cd>
+                <Fmly>
+                  <Cd>CNTR</Cd>
+                  <SubFmlyCd>CDPT</SubFmlyCd>
+                </Fmly>
+              </Domn>
+            </BkTxCd>
+            <Chrgs>
+              <TtlChrgsAndTaxAmt Ccy="CHF">0.94</TtlChrgsAndTaxAmt>
+              <Rcrd>
+                <Amt Ccy="CHF">0.90</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <ChrgInclInd>false</ChrgInclInd>
+                <Tp>
+                  <Prtry>
+                    <Id>2</Id>
+                  </Prtry>
+                </Tp>
+              </Rcrd>
+              <Rcrd>
+                <Amt Ccy="CHF">0.04</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <ChrgInclInd>false</ChrgInclInd>
+                <Tp>
+                  <Prtry>
+                    <Id>4</Id>
+                  </Prtry>
+                </Tp>
+              </Rcrd>
+            </Chrgs>
+            <RltdAgts>
+              <DbtrAgt>
+                <FinInstnId>
+                  <BICFI>POFICHBEXXX</BICFI>
+                  <Nm>POSTFINANCE AG</Nm>
+                  <PstlAdr>
+                    <AdrLine>MINGERSTRASSE 20</AdrLine>
+                    <AdrLine>3030 BERNE</AdrLine>
+                  </PstlAdr>
+                </FinInstnId>
+              </DbtrAgt>
+            </RltdAgts>
+            <RmtInf>
+              <Strd>
+                <CdtrRefInf>
+                  <Tp>
+                    <CdOrPrtry>
+                      <Prtry>ISR Reference</Prtry>
+                    </CdOrPrtry>
+                  </Tp>
+                  <Ref>000000000002015110003015939</Ref>
+                </CdtrRefInf>
+                <AddtlRmtInf>?REJECT?0</AddtlRmtInf>
+              </Strd>
+            </RmtInf>
+            <RltdDts>
+              <AccptncDtTm>2016-05-26T20:00:00</AccptncDtTm>
+            </RltdDts>
+          </TxDtls>
+          <TxDtls>
+            <Refs>
+              <AcctSvcrRef>160527CH00T3L0NC</AcctSvcrRef>
+              <Prtry>
+                <Tp>04</Tp>
+                <Ref>20160526017105000100040</Ref>
+              </Prtry>
+            </Refs>
+            <Amt Ccy="CHF">100.00</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <BkTxCd>
+              <Domn>
+                <Cd>PMNT</Cd>
+                <Fmly>
+                  <Cd>CNTR</Cd>
+                  <SubFmlyCd>CDPT</SubFmlyCd>
+                </Fmly>
+              </Domn>
+            </BkTxCd>
+            <Chrgs>
+              <TtlChrgsAndTaxAmt Ccy="CHF">1.24</TtlChrgsAndTaxAmt>
+              <Rcrd>
+                <Amt Ccy="CHF">1.20</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <ChrgInclInd>false</ChrgInclInd>
+                <Tp>
+                  <Prtry>
+                    <Id>2</Id>
+                  </Prtry>
+                </Tp>
+              </Rcrd>
+              <Rcrd>
+                <Amt Ccy="CHF">0.04</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <ChrgInclInd>false</ChrgInclInd>
+                <Tp>
+                  <Prtry>
+                    <Id>4</Id>
+                  </Prtry>
+                </Tp>
+              </Rcrd>
+            </Chrgs>
+            <RltdAgts>
+              <DbtrAgt>
+                <FinInstnId>
+                  <BICFI>POFICHBEXXX</BICFI>
+                  <Nm>POSTFINANCE AG</Nm>
+                  <PstlAdr>
+                    <AdrLine>MINGERSTRASSE 20</AdrLine>
+                    <AdrLine>3030 BERNE</AdrLine>
+                  </PstlAdr>
+                </FinInstnId>
+              </DbtrAgt>
+            </RltdAgts>
+            <RmtInf>
+              <Strd>
+                <CdtrRefInf>
+                  <Tp>
+                    <CdOrPrtry>
+                      <Prtry>ISR Reference</Prtry>
+                    </CdOrPrtry>
+                  </Tp>
+                  <Ref>000000000002016030000535990</Ref>
+                </CdtrRefInf>
+                <AddtlRmtInf>?REJECT?0</AddtlRmtInf>
+              </Strd>
+            </RmtInf>
+            <RltdDts>
+              <AccptncDtTm>2016-05-26T20:00:00</AccptncDtTm>
+            </RltdDts>
+          </TxDtls>
+          <TxDtls>
+            <Refs>
+              <AcctSvcrRef>160527CH00T3KXDV</AcctSvcrRef>
+              <Prtry>
+                <Tp>01</Tp>
+                <Ref>160527CH00T3KXDV</Ref>
+              </Prtry>
+            </Refs>
+            <Amt Ccy="CHF">200.00</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <BkTxCd>
+              <Domn>
+                <Cd>PMNT</Cd>
+                <Fmly>
+                  <Cd>RCDT</Cd>
+                  <SubFmlyCd>AUTT</SubFmlyCd>
+                </Fmly>
+              </Domn>
+            </BkTxCd>
+            <RltdPties>
+              <Dbtr>
+                <Nm>Bernasconi Maria</Nm>
+                <PstlAdr>
+                  <StrtNm>Place de la Gare</StrtNm>
+                  <BldgNb>12</BldgNb>
+                  <PstCd>2502</PstCd>
+                  <TwnNm>Biel/Bienne</TwnNm>
+                  <Ctry>CH</Ctry>
+                </PstlAdr>
+              </Dbtr>
+              <DbtrAcct>
+                <Id>
+                  <IBAN>CH4444444444444444444</IBAN>
+                </Id>
+              </DbtrAcct>
+            </RltdPties>
+            <RltdAgts>
+              <DbtrAgt>
+                <FinInstnId>
+                  <BICFI>POFICHBEXXX</BICFI>
+                  <Nm>POSTFINANCE AG</Nm>
+                  <PstlAdr>
+                    <AdrLine>MINGERSTRASSE 20</AdrLine>
+                    <AdrLine>3030 BERNE</AdrLine>
+                  </PstlAdr>
+                </FinInstnId>
+              </DbtrAgt>
+            </RltdAgts>
+            <RmtInf>
+              <Strd>
+                <CdtrRefInf>
+                  <Tp>
+                    <CdOrPrtry>
+                      <Prtry>ISR Reference</Prtry>
+                    </CdOrPrtry>
+                  </Tp>
+                  <Ref>000000000002016030002463591</Ref>
+                </CdtrRefInf>
+                <AddtlRmtInf>?REJECT?0</AddtlRmtInf>
+              </Strd>
+            </RmtInf>
+            <RltdDts>
+              <AccptncDtTm>2016-05-27T20:00:00</AccptncDtTm>
+            </RltdDts>
+          </TxDtls>
+          <TxDtls>
+            <Refs>
+              <AcctSvcrRef>160527CH00T3KZO9</AcctSvcrRef>
+              <Prtry>
+                <Tp>04</Tp>
+                <Ref>20160526252501000100033</Ref>
+              </Prtry>
+            </Refs>
+            <Amt Ccy="CHF">50.00</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <BkTxCd>
+              <Domn>
+                <Cd>PMNT</Cd>
+                <Fmly>
+                  <Cd>CNTR</Cd>
+                  <SubFmlyCd>CDPT</SubFmlyCd>
+                </Fmly>
+              </Domn>
+            </BkTxCd>
+            <Chrgs>
+              <TtlChrgsAndTaxAmt Ccy="CHF">0.94</TtlChrgsAndTaxAmt>
+              <Rcrd>
+                <Amt Ccy="CHF">0.90</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <ChrgInclInd>false</ChrgInclInd>
+                <Tp>
+                  <Prtry>
+                    <Id>2</Id>
+                  </Prtry>
+                </Tp>
+              </Rcrd>
+              <Rcrd>
+                <Amt Ccy="CHF">0.04</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <ChrgInclInd>false</ChrgInclInd>
+                <Tp>
+                  <Prtry>
+                    <Id>4</Id>
+                  </Prtry>
+                </Tp>
+              </Rcrd>
+            </Chrgs>
+            <RltdAgts>
+              <DbtrAgt>
+                <FinInstnId>
+                  <BICFI>POFICHBEXXX</BICFI>
+                  <Nm>POSTFINANCE AG</Nm>
+                  <PstlAdr>
+                    <AdrLine>MINGERSTRASSE 20</AdrLine>
+                    <AdrLine>3030 BERNE</AdrLine>
+                  </PstlAdr>
+                </FinInstnId>
+              </DbtrAgt>
+            </RltdAgts>
+            <RmtInf>
+              <Strd>
+                <CdtrRefInf>
+                  <Tp>
+                    <CdOrPrtry>
+                      <Prtry>ISR Reference</Prtry>
+                    </CdOrPrtry>
+                  </Tp>
+                  <Ref>000000000002016030002780613</Ref>
+                </CdtrRefInf>
+                <AddtlRmtInf>?REJECT?0</AddtlRmtInf>
+              </Strd>
+            </RmtInf>
+            <RltdDts>
+              <AccptncDtTm>2016-05-26T20:00:00</AccptncDtTm>
+            </RltdDts>
+          </TxDtls>
+          <TxDtls>
+            <Refs>
+              <AcctSvcrRef>160527CH00T3L0V2</AcctSvcrRef>
+              <Prtry>
+                <Tp>04</Tp>
+                <Ref>20160526832003000100047</Ref>
+              </Prtry>
+            </Refs>
+            <Amt Ccy="CHF">100.00</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <BkTxCd>
+              <Domn>
+                <Cd>PMNT</Cd>
+                <Fmly>
+                  <Cd>CNTR</Cd>
+                  <SubFmlyCd>CDPT</SubFmlyCd>
+                </Fmly>
+              </Domn>
+            </BkTxCd>
+            <Chrgs>
+              <TtlChrgsAndTaxAmt Ccy="CHF">1.24</TtlChrgsAndTaxAmt>
+              <Rcrd>
+                <Amt Ccy="CHF">1.20</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <ChrgInclInd>false</ChrgInclInd>
+                <Tp>
+                  <Prtry>
+                    <Id>2</Id>
+                  </Prtry>
+                </Tp>
+              </Rcrd>
+              <Rcrd>
+                <Amt Ccy="CHF">0.04</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <ChrgInclInd>false</ChrgInclInd>
+                <Tp>
+                  <Prtry>
+                    <Id>4</Id>
+                  </Prtry>
+                </Tp>
+              </Rcrd>
+            </Chrgs>
+            <RltdAgts>
+              <DbtrAgt>
+                <FinInstnId>
+                  <BICFI>POFICHBEXXX</BICFI>
+                  <Nm>POSTFINANCE AG</Nm>
+                  <PstlAdr>
+                    <AdrLine>MINGERSTRASSE 20</AdrLine>
+                    <AdrLine>3030 BERNE</AdrLine>
+                  </PstlAdr>
+                </FinInstnId>
+              </DbtrAgt>
+            </RltdAgts>
+            <RmtInf>
+              <Strd>
+                <CdtrRefInf>
+                  <Tp>
+                    <CdOrPrtry>
+                      <Prtry>ISR Reference</Prtry>
+                    </CdOrPrtry>
+                  </Tp>
+                  <Ref>000000000002016030001554373</Ref>
+                </CdtrRefInf>
+                <AddtlRmtInf>?REJECT?0</AddtlRmtInf>
+              </Strd>
+            </RmtInf>
+            <RltdDts>
+              <AccptncDtTm>2016-05-26T20:00:00</AccptncDtTm>
+            </RltdDts>
+          </TxDtls>
+          <TxDtls>
+            <Refs>
+              <AcctSvcrRef>160527CH00T99DU7</AcctSvcrRef>
+              <Prtry>
+                <Tp>01</Tp>
+                <Ref>160527CH00T99DU7</Ref>
+              </Prtry>
+            </Refs>
+            <Amt Ccy="CHF">50.00</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <BkTxCd>
+              <Domn>
+                <Cd>PMNT</Cd>
+                <Fmly>
+                  <Cd>RCDT</Cd>
+                  <SubFmlyCd>AUTT</SubFmlyCd>
+                </Fmly>
+              </Domn>
+            </BkTxCd>
+            <RltdPties>
+              <Dbtr>
+                <Nm>Zürcher Kantonalbank</Nm>
+                <PstlAdr>
+                  <StrtNm>Bahnhofstrasse</StrtNm>
+                  <BldgNb>9</BldgNb>
+                  <PstCd>8001</PstCd>
+                  <TwnNm>Zürich</TwnNm>
+                  <Ctry>CH</Ctry>
+                </PstlAdr>
+              </Dbtr>
+              <DbtrAcct>
+                <Id>
+                  <IBAN>CH0000000000000000000</IBAN>
+                </Id>
+              </DbtrAcct>
+            </RltdPties>
+            <RltdAgts>
+              <DbtrAgt>
+                <FinInstnId>
+                  <BICFI>POFICHBEXXX</BICFI>
+                  <Nm>POSTFINANCE AG</Nm>
+                  <PstlAdr>
+                    <AdrLine>MINGERSTRASSE 20</AdrLine>
+                    <AdrLine>3030 BERNE</AdrLine>
+                  </PstlAdr>
+                </FinInstnId>
+              </DbtrAgt>
+            </RltdAgts>
+            <RmtInf>
+              <Strd>
+                <CdtrRefInf>
+                  <Tp>
+                    <CdOrPrtry>
+                      <Prtry>ISR Reference</Prtry>
+                    </CdOrPrtry>
+                  </Tp>
+                  <Ref>000000000002016030000985620</Ref>
+                </CdtrRefInf>
+                <AddtlRmtInf>?REJECT?0</AddtlRmtInf>
+              </Strd>
+            </RmtInf>
+            <RltdDts>
+              <AccptncDtTm>2016-05-27T20:00:00</AccptncDtTm>
+            </RltdDts>
+          </TxDtls>
+          <TxDtls>
+            <Refs>
+              <AcctSvcrRef>160527CH00T99EBW</AcctSvcrRef>
+              <Prtry>
+                <Tp>01</Tp>
+                <Ref>160527CH00T99EBW</Ref>
+              </Prtry>
+            </Refs>
+            <Amt Ccy="CHF">100.00</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <BkTxCd>
+              <Domn>
+                <Cd>PMNT</Cd>
+                <Fmly>
+                  <Cd>RCDT</Cd>
+                  <SubFmlyCd>AUTT</SubFmlyCd>
+                </Fmly>
+              </Domn>
+            </BkTxCd>
+            <RltdPties>
+              <Dbtr>
+                <Nm>UBS Switzerland AG</Nm>
+                <PstlAdr>
+                  <StrtNm>Bahnhofstrasse</StrtNm>
+                  <BldgNb>45</BldgNb>
+                  <PstCd>8001</PstCd>
+                  <TwnNm>Zürich</TwnNm>
+                  <Ctry>CH</Ctry>
+                </PstlAdr>
+              </Dbtr>
+              <DbtrAcct>
+                <Id>
+                  <IBAN>CH0000000000000000000</IBAN>
+                </Id>
+              </DbtrAcct>
+            </RltdPties>
+            <RltdAgts>
+              <DbtrAgt>
+                <FinInstnId>
+                  <BICFI>POFICHBEXXX</BICFI>
+                  <Nm>POSTFINANCE AG</Nm>
+                  <PstlAdr>
+                    <AdrLine>MINGERSTRASSE 20</AdrLine>
+                    <AdrLine>3030 BERNE</AdrLine>
+                  </PstlAdr>
+                </FinInstnId>
+              </DbtrAgt>
+            </RltdAgts>
+            <RmtInf>
+              <Strd>
+                <CdtrRefInf>
+                  <Tp>
+                    <CdOrPrtry>
+                      <Prtry>ISR Reference</Prtry>
+                    </CdOrPrtry>
+                  </Tp>
+                  <Ref>000000000002016030001593614</Ref>
+                </CdtrRefInf>
+                <AddtlRmtInf>?REJECT?0</AddtlRmtInf>
+              </Strd>
+            </RmtInf>
+            <RltdDts>
+              <AccptncDtTm>2016-05-27T20:00:00</AccptncDtTm>
+            </RltdDts>
+          </TxDtls>
+        </NtryDtls>
+        <AddtlNtryInf>SAMMELGUTSCHRIFT ESR VERARBEITUNG VOM 27.05.2016 KUNDENNUMMER 01-000000-4 PAKET ID: 160527CH000000RU</AddtlNtryInf>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="CHF">620.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <RvslInd>false</RvslInd>
+        <Sts>BOOK</Sts>
+        <BookgDt>
+          <Dt>2016-05-27</Dt>
+        </BookgDt>
+        <ValDt>
+          <Dt>2016-05-27</Dt>
+        </ValDt>
+        <AcctSvcrRef>20160527007602769947016000000012</AcctSvcrRef>
+        <BkTxCd>
+          <Domn>
+            <Cd>PMNT</Cd>
+            <Fmly>
+              <Cd>RCDT</Cd>
+              <SubFmlyCd>AUTT</SubFmlyCd>
+            </Fmly>
+          </Domn>
+        </BkTxCd>
+        <Chrgs>
+          <TtlChrgsAndTaxAmt Ccy="CHF">7.20</TtlChrgsAndTaxAmt>
+          <Rcrd>
+            <Amt Ccy="CHF">4.80</Amt>
+            <CdtDbtInd>DBIT</CdtDbtInd>
+            <ChrgInclInd>false</ChrgInclInd>
+            <Tp>
+              <Prtry>
+                <Id>2</Id>
+              </Prtry>
+            </Tp>
+          </Rcrd>
+          <Rcrd>
+            <Amt Ccy="CHF">2.40</Amt>
+            <CdtDbtInd>DBIT</CdtDbtInd>
+            <ChrgInclInd>false</ChrgInclInd>
+            <Tp>
+              <Prtry>
+                <Id>5</Id>
+              </Prtry>
+            </Tp>
+          </Rcrd>
+        </Chrgs>
+        <NtryDtls>
+          <Btch>
+            <NbOfTxs>8</NbOfTxs>
+          </Btch>
+          <TxDtls>
+            <Refs>
+              <AcctSvcrRef>160527CH00T2UENT</AcctSvcrRef>
+              <Prtry>
+                <Tp>00</Tp>
+                <Ref>20160527375204000060262</Ref>
+              </Prtry>
+            </Refs>
+            <Amt Ccy="CHF">50.00</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <BkTxCd>
+              <Domn>
+                <Cd>PMNT</Cd>
+                <Fmly>
+                  <Cd>RCDT</Cd>
+                  <SubFmlyCd>ATXN</SubFmlyCd>
+                </Fmly>
+              </Domn>
+            </BkTxCd>
+            <RltdPties>
+              <Dbtr>
+                <Nm>Rutschmann Pia</Nm>
+                <PstlAdr>
+                  <AdrLine>Marktgasse 28</AdrLine>
+                  <AdrLine>CH/9400 Rorschach</AdrLine>
+                </PstlAdr>
+              </Dbtr>
+              <DbtrAcct>
+                <Id>
+                  <IBAN>CH1111111111111111111</IBAN>
+                </Id>
+              </DbtrAcct>
+            </RltdPties>
+            <RltdAgts>
+              <DbtrAgt>
+                <FinInstnId>
+                  <ClrSysMmbId>
+                    <MmbId>000048358</MmbId>
+                  </ClrSysMmbId>
+                  <Nm>Credit Suisse AG</Nm>
+                  <PstlAdr>
+                    <AdrLine>Paradeplatz 8</AdrLine>
+                    <AdrLine>8070 Zürich</AdrLine>
+                  </PstlAdr>
+                </FinInstnId>
+              </DbtrAgt>
+            </RltdAgts>
+            <RmtInf>
+              <Ustrd>MUSTER MITTEILUNG</Ustrd>
+              <Strd>
+                <AddtlRmtInf>?REJECT?0</AddtlRmtInf>
+                <AddtlRmtInf>?ERROR?000</AddtlRmtInf>
+              </Strd>
+            </RmtInf>
+            <RltdDts>
+              <AccptncDtTm>2016-05-27T20:00:00</AccptncDtTm>
+            </RltdDts>
+          </TxDtls>
+          <TxDtls>
+            <Refs>
+              <AcctSvcrRef>160527CH00T2Y4XY</AcctSvcrRef>
+              <Prtry>
+                <Tp>00</Tp>
+                <Ref>20160527375204000060266</Ref>
+              </Prtry>
+            </Refs>
+            <Amt Ccy="CHF">20.00</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <BkTxCd>
+              <Domn>
+                <Cd>PMNT</Cd>
+                <Fmly>
+                  <Cd>RCDT</Cd>
+                  <SubFmlyCd>ATXN</SubFmlyCd>
+                </Fmly>
+              </Domn>
+            </BkTxCd>
+            <RltdPties>
+              <Dbtr>
+                <Nm>Bernasconi Maria</Nm>
+                <PstlAdr>
+                  <AdrLine>Place de la Gare 12</AdrLine>
+                  <AdrLine>CH/2502 Biel/Bienne</AdrLine>
+                </PstlAdr>
+              </Dbtr>
+              <DbtrAcct>
+                <Id>
+                  <IBAN>CH4444444444444444444</IBAN>
+                </Id>
+              </DbtrAcct>
+            </RltdPties>
+            <RltdAgts>
+              <DbtrAgt>
+                <FinInstnId>
+                  <ClrSysMmbId>
+                    <MmbId>000048358</MmbId>
+                  </ClrSysMmbId>
+                  <Nm>Credit Suisse AG</Nm>
+                  <PstlAdr>
+                    <AdrLine>Paradeplatz 8</AdrLine>
+                    <AdrLine>8070 Zürich</AdrLine>
+                  </PstlAdr>
+                </FinInstnId>
+              </DbtrAgt>
+            </RltdAgts>
+            <RmtInf>
+              <Ustrd>MUSTER MITTEILUNG</Ustrd>
+              <Strd>
+                <AddtlRmtInf>?REJECT?0</AddtlRmtInf>
+                <AddtlRmtInf>?ERROR?000</AddtlRmtInf>
+              </Strd>
+            </RmtInf>
+            <RltdDts>
+              <AccptncDtTm>2016-05-27T20:00:00</AccptncDtTm>
+            </RltdDts>
+          </TxDtls>
+          <TxDtls>
+            <Refs>
+              <AcctSvcrRef>160527CH00T3HDBA</AcctSvcrRef>
+              <Prtry>
+                <Tp>00</Tp>
+                <Ref>20160527375204000060273</Ref>
+              </Prtry>
+            </Refs>
+            <Amt Ccy="CHF">100.00</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <BkTxCd>
+              <Domn>
+                <Cd>PMNT</Cd>
+                <Fmly>
+                  <Cd>RCDT</Cd>
+                  <SubFmlyCd>AUTT</SubFmlyCd>
+                </Fmly>
+              </Domn>
+            </BkTxCd>
+            <RltdPties>
+              <Dbtr>
+                <Nm>Rutschmann Pia</Nm>
+                <PstlAdr>
+                  <AdrLine>Marktgasse 28</AdrLine>
+                  <AdrLine>CH/9400 Rorschach</AdrLine>
+                </PstlAdr>
+              </Dbtr>
+              <DbtrAcct>
+                <Id>
+                  <IBAN>CH1111111111111111111</IBAN>
+                </Id>
+              </DbtrAcct>
+            </RltdPties>
+            <RltdAgts>
+              <DbtrAgt>
+                <FinInstnId>
+                  <BICFI>POFICHBEXXX</BICFI>
+                  <Nm>POSTFINANCE AG</Nm>
+                  <PstlAdr>
+                    <AdrLine>MINGERSTRASSE 20</AdrLine>
+                    <AdrLine>3030 BERNE</AdrLine>
+                  </PstlAdr>
+                </FinInstnId>
+              </DbtrAgt>
+            </RltdAgts>
+            <RmtInf>
+              <Ustrd>MUSTER MITTEILUNG 1</Ustrd>
+              <Ustrd>MUSTER MITTEILUNG 2</Ustrd>
+              <Ustrd>MUSTER MITTEILUNG 3</Ustrd>
+              <Ustrd>MUSTER MITTEILUNG 4</Ustrd>
+              <Strd>
+                <AddtlRmtInf>?REJECT?0</AddtlRmtInf>
+                <AddtlRmtInf>?ERROR?000</AddtlRmtInf>
+              </Strd>
+            </RmtInf>
+            <RltdDts>
+              <AccptncDtTm>2016-05-27T20:00:00</AccptncDtTm>
+            </RltdDts>
+          </TxDtls>
+          <TxDtls>
+            <Refs>
+              <AcctSvcrRef>160527CH00T3VT3Y</AcctSvcrRef>
+              <Prtry>
+                <Tp>00</Tp>
+                <Ref>20160525117605000100096</Ref>
+              </Prtry>
+            </Refs>
+            <Amt Ccy="CHF">100.00</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <BkTxCd>
+              <Domn>
+                <Cd>PMNT</Cd>
+                <Fmly>
+                  <Cd>CNTR</Cd>
+                  <SubFmlyCd>CDPT</SubFmlyCd>
+                </Fmly>
+              </Domn>
+            </BkTxCd>
+            <Chrgs>
+              <TtlChrgsAndTaxAmt Ccy="CHF">2.60</TtlChrgsAndTaxAmt>
+              <Rcrd>
+                <Amt Ccy="CHF">1.80</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <ChrgInclInd>false</ChrgInclInd>
+                <Tp>
+                  <Prtry>
+                    <Id>2</Id>
+                  </Prtry>
+                </Tp>
+              </Rcrd>
+              <Rcrd>
+                <Amt Ccy="CHF">0.80</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <ChrgInclInd>false</ChrgInclInd>
+                <Tp>
+                  <Prtry>
+                    <Id>5</Id>
+                  </Prtry>
+                </Tp>
+              </Rcrd>
+            </Chrgs>
+            <RltdPties>
+              <Dbtr>
+                <Nm>Bernasconi Maria</Nm>
+                <PstlAdr>
+                  <AdrLine>Place de la Gare 12</AdrLine>
+                  <AdrLine>CH/2502 Biel/Bienne</AdrLine>
+                </PstlAdr>
+              </Dbtr>
+            </RltdPties>
+            <RltdAgts>
+              <DbtrAgt>
+                <FinInstnId>
+                  <BICFI>POFICHBEXXX</BICFI>
+                  <Nm>POSTFINANCE AG</Nm>
+                  <PstlAdr>
+                    <AdrLine>MINGERSTRASSE 20</AdrLine>
+                    <AdrLine>3030 BERNE</AdrLine>
+                  </PstlAdr>
+                </FinInstnId>
+              </DbtrAgt>
+            </RltdAgts>
+            <RmtInf>
+              <Strd>
+                <AddtlRmtInf>?REJECT?0</AddtlRmtInf>
+                <AddtlRmtInf>?ERROR?008</AddtlRmtInf>
+              </Strd>
+            </RmtInf>
+            <RltdDts>
+              <AccptncDtTm>2016-05-25T20:00:00</AccptncDtTm>
+            </RltdDts>
+          </TxDtls>
+          <TxDtls>
+            <Refs>
+              <AcctSvcrRef>160527CH00T3VTGB</AcctSvcrRef>
+              <Prtry>
+                <Tp>00</Tp>
+                <Ref>20160525201601000100070</Ref>
+              </Prtry>
+            </Refs>
+            <Amt Ccy="CHF">30.00</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <BkTxCd>
+              <Domn>
+                <Cd>PMNT</Cd>
+                <Fmly>
+                  <Cd>CNTR</Cd>
+                  <SubFmlyCd>CDPT</SubFmlyCd>
+                </Fmly>
+              </Domn>
+            </BkTxCd>
+            <Chrgs>
+              <TtlChrgsAndTaxAmt Ccy="CHF">2.30</TtlChrgsAndTaxAmt>
+              <Rcrd>
+                <Amt Ccy="CHF">1.50</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <ChrgInclInd>false</ChrgInclInd>
+                <Tp>
+                  <Prtry>
+                    <Id>2</Id>
+                  </Prtry>
+                </Tp>
+              </Rcrd>
+              <Rcrd>
+                <Amt Ccy="CHF">0.80</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <ChrgInclInd>false</ChrgInclInd>
+                <Tp>
+                  <Prtry>
+                    <Id>5</Id>
+                  </Prtry>
+                </Tp>
+              </Rcrd>
+            </Chrgs>
+            <RltdPties>
+              <Dbtr>
+                <Nm>Rutschmann Pia</Nm>
+                <PstlAdr>
+                  <AdrLine>Marktgasse 28</AdrLine>
+                  <AdrLine>CH/9400 Rorschach</AdrLine>
+                </PstlAdr>
+              </Dbtr>
+            </RltdPties>
+            <RltdAgts>
+              <DbtrAgt>
+                <FinInstnId>
+                  <BICFI>POFICHBEXXX</BICFI>
+                  <Nm>POSTFINANCE AG</Nm>
+                  <PstlAdr>
+                    <AdrLine>MINGERSTRASSE 20</AdrLine>
+                    <AdrLine>3030 BERNE</AdrLine>
+                  </PstlAdr>
+                </FinInstnId>
+              </DbtrAgt>
+            </RltdAgts>
+            <RmtInf>
+              <Strd>
+                <AddtlRmtInf>?REJECT?0</AddtlRmtInf>
+                <AddtlRmtInf>?ERROR?008</AddtlRmtInf>
+              </Strd>
+            </RmtInf>
+            <RltdDts>
+              <AccptncDtTm>2016-05-25T20:00:00</AccptncDtTm>
+            </RltdDts>
+          </TxDtls>
+          <TxDtls>
+            <Refs>
+              <AcctSvcrRef>160527CH00T3VTGE</AcctSvcrRef>
+              <Prtry>
+                <Tp>00</Tp>
+                <Ref>20160525863805000100101</Ref>
+              </Prtry>
+            </Refs>
+            <Amt Ccy="CHF">50.00</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <BkTxCd>
+              <Domn>
+                <Cd>PMNT</Cd>
+                <Fmly>
+                  <Cd>CNTR</Cd>
+                  <SubFmlyCd>CDPT</SubFmlyCd>
+                </Fmly>
+              </Domn>
+            </BkTxCd>
+            <Chrgs>
+              <TtlChrgsAndTaxAmt Ccy="CHF">2.30</TtlChrgsAndTaxAmt>
+              <Rcrd>
+                <Amt Ccy="CHF">1.50</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <ChrgInclInd>false</ChrgInclInd>
+                <Tp>
+                  <Prtry>
+                    <Id>2</Id>
+                  </Prtry>
+                </Tp>
+              </Rcrd>
+              <Rcrd>
+                <Amt Ccy="CHF">0.80</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <ChrgInclInd>false</ChrgInclInd>
+                <Tp>
+                  <Prtry>
+                    <Id>5</Id>
+                  </Prtry>
+                </Tp>
+              </Rcrd>
+            </Chrgs>
+            <RltdPties>
+              <Dbtr>
+                <Nm>Bernasconi Maria</Nm>
+                <PstlAdr>
+                  <AdrLine>Place de la Gare 12</AdrLine>
+                  <AdrLine>CH/2502 Biel/Bienne</AdrLine>
+                </PstlAdr>
+              </Dbtr>
+            </RltdPties>
+            <RltdAgts>
+              <DbtrAgt>
+                <FinInstnId>
+                  <BICFI>POFICHBEXXX</BICFI>
+                  <Nm>POSTFINANCE AG</Nm>
+                  <PstlAdr>
+                    <AdrLine>MINGERSTRASSE 20</AdrLine>
+                    <AdrLine>3030 BERNE</AdrLine>
+                  </PstlAdr>
+                </FinInstnId>
+              </DbtrAgt>
+            </RltdAgts>
+            <RmtInf>
+              <Ustrd>MUSTER MITTEILUNG 1</Ustrd>
+              <Ustrd>MUSTER MITTEILUNG 2</Ustrd>
+              <Strd>
+                <AddtlRmtInf>?REJECT?0</AddtlRmtInf>
+                <AddtlRmtInf>?ERROR?000</AddtlRmtInf>
+              </Strd>
+            </RmtInf>
+            <RltdDts>
+              <AccptncDtTm>2016-05-25T20:00:00</AccptncDtTm>
+            </RltdDts>
+          </TxDtls>
+          <TxDtls>
+            <Refs>
+              <AcctSvcrRef>160527CH00T2QNQZ</AcctSvcrRef>
+              <Prtry>
+                <Tp>00</Tp>
+                <Ref>20160527375204000060263</Ref>
+              </Prtry>
+            </Refs>
+            <Amt Ccy="CHF">20.00</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <BkTxCd>
+              <Domn>
+                <Cd>PMNT</Cd>
+                <Fmly>
+                  <Cd>RCDT</Cd>
+                  <SubFmlyCd>ATXN</SubFmlyCd>
+                </Fmly>
+              </Domn>
+            </BkTxCd>
+            <RltdPties>
+              <Dbtr>
+                <Nm>Rutschmann Pia</Nm>
+                <PstlAdr>
+                  <AdrLine>Marktgasse 28</AdrLine>
+                  <AdrLine>CH/9400 Rorschach</AdrLine>
+                </PstlAdr>
+              </Dbtr>
+              <DbtrAcct>
+                <Id>
+                  <IBAN>CH1111111111111111111</IBAN>
+                </Id>
+              </DbtrAcct>
+            </RltdPties>
+            <RltdAgts>
+              <DbtrAgt>
+                <FinInstnId>
+                  <ClrSysMmbId>
+                    <MmbId>000048358</MmbId>
+                  </ClrSysMmbId>
+                  <Nm>Credit Suisse AG</Nm>
+                  <PstlAdr>
+                    <AdrLine>Paradeplatz 8</AdrLine>
+                    <AdrLine>8070 Zürich</AdrLine>
+                  </PstlAdr>
+                </FinInstnId>
+              </DbtrAgt>
+            </RltdAgts>
+            <RmtInf>
+              <Ustrd>MUSTER MITTEILUNG 1</Ustrd>
+              <Ustrd>MUSTER MITTEILUNG 2</Ustrd>
+              <Strd>
+                <AddtlRmtInf>?REJECT?0</AddtlRmtInf>
+                <AddtlRmtInf>?ERROR?000</AddtlRmtInf>
+              </Strd>
+            </RmtInf>
+            <RltdDts>
+              <AccptncDtTm>2016-05-27T20:00:00</AccptncDtTm>
+            </RltdDts>
+          </TxDtls>
+          <TxDtls>
+            <Refs>
+              <AcctSvcrRef>160527CH00T3HG80</AcctSvcrRef>
+              <Prtry>
+                <Tp>00</Tp>
+                <Ref>20160527375204000060271</Ref>
+              </Prtry>
+            </Refs>
+            <Amt Ccy="CHF">250.00</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <BkTxCd>
+              <Domn>
+                <Cd>PMNT</Cd>
+                <Fmly>
+                  <Cd>RCDT</Cd>
+                  <SubFmlyCd>AUTT</SubFmlyCd>
+                </Fmly>
+              </Domn>
+            </BkTxCd>
+            <RltdPties>
+              <Dbtr>
+                <Nm>Rutschmann Pia</Nm>
+                <PstlAdr>
+                  <StrtNm>Marktgasse</StrtNm>
+                  <BldgNb>28</BldgNb>
+                  <PstCd>9400</PstCd>
+                  <TwnNm>Rorschach</TwnNm>
+                  <Ctry>CH</Ctry>
+                </PstlAdr>
+              </Dbtr>
+              <DbtrAcct>
+                <Id>
+                  <IBAN>CH1111111111111111111</IBAN>
+                </Id>
+              </DbtrAcct>
+            </RltdPties>
+            <RltdAgts>
+              <DbtrAgt>
+                <FinInstnId>
+                  <BICFI>POFICHBEXXX</BICFI>
+                  <Nm>POSTFINANCE AG</Nm>
+                  <PstlAdr>
+                    <AdrLine>MINGERSTRASSE 20</AdrLine>
+                    <AdrLine>3030 BERNE</AdrLine>
+                  </PstlAdr>
+                </FinInstnId>
+              </DbtrAgt>
+            </RltdAgts>
+            <RmtInf>
+              <Ustrd>MUSTER MITTEILUNG 1</Ustrd>
+              <Strd>
+                <AddtlRmtInf>?REJECT?0</AddtlRmtInf>
+                <AddtlRmtInf>?ERROR?000</AddtlRmtInf>
+              </Strd>
+            </RmtInf>
+            <RltdDts>
+              <AccptncDtTm>2016-05-27T20:00:00</AccptncDtTm>
+            </RltdDts>
+          </TxDtls>
+        </NtryDtls>
+        <AddtlNtryInf>SAMMELGUTSCHRIFT ES VERARBEITUNG VOM 27.05.2016 PAKET ID: 160527CH000000R2</AddtlNtryInf>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="CHF">110.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <RvslInd>false</RvslInd>
+        <Sts>BOOK</Sts>
+        <BookgDt>
+          <Dt>2016-04-06</Dt>
+        </BookgDt>
+        <ValDt>
+          <Dt>2016-03-23</Dt>
+        </ValDt>
+        <AcctSvcrRef>20160323007602726186629000000012</AcctSvcrRef>
+        <BkTxCd>
+          <Domn>
+            <Cd>PMNT</Cd>
+            <Fmly>
+              <Cd>ICDT</Cd>
+              <SubFmlyCd>RRTN</SubFmlyCd>
+            </Fmly>
+          </Domn>
+        </BkTxCd>
+        <NtryDtls>
+          <Btch>
+            <NbOfTxs>3</NbOfTxs>
+          </Btch>
+          <TxDtls>
+            <Refs>
+              <MsgId>MSG-RETURN-Test</MsgId>
+              <AcctSvcrRef>160406CH00NKZCKG</AcctSvcrRef>
+              <InstrId>TEST002A11096JRG</InstrId>
+            </Refs>
+            <Amt Ccy="CHF">20.00</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <BkTxCd>
+              <Domn>
+                <Cd>PMNT</Cd>
+                <Fmly>
+                  <Cd>ICDT</Cd>
+                  <SubFmlyCd>RRTN</SubFmlyCd>
+                </Fmly>
+              </Domn>
+            </BkTxCd>
+            <RltdPties>
+              <Dbtr>
+                <Nm>Max Mustermann</Nm>
+                <PstlAdr>
+                  <AdrLine>Mustergasse</AdrLine>
+                  <AdrLine>8000 Zuerich</AdrLine>
+                </PstlAdr>
+              </Dbtr>
+              <DbtrAcct>
+                <Id>
+                  <IBAN>CH7408237100000000002</IBAN>
+                </Id>
+              </DbtrAcct>
+            </RltdPties>
+            <RltdAgts>
+              <DbtrAgt>
+                <FinInstnId>
+                  <ClrSysMmbId>
+                    <MmbId>082375</MmbId>
+                  </ClrSysMmbId>
+                  <Nm>BANQUE PRIVEE BCP (SUISSE) SA</Nm>
+                  <PstlAdr>
+                    <AdrLine>Place du Molard 4</AdrLine>
+                    <AdrLine>1211 Genève 3</AdrLine>
+                  </PstlAdr>
+                </FinInstnId>
+              </DbtrAgt>
+            </RltdAgts>
+            <RmtInf>
+              <Ustrd>Mitteilung Return Muster</Ustrd>
+            </RmtInf>
+            <RltdDts>
+              <AccptncDtTm>2016-04-06T20:00:00</AccptncDtTm>
+            </RltdDts>
+            <RtrInf>
+              <Rsn>
+                <Cd>NARR</Cd>
+              </Rsn>
+              <AddtlInf>RETOUR VAL 23.03.2016 BEGUENSTIGTER UNBEKANNT</AddtlInf>
+            </RtrInf>
+          </TxDtls>
+          <TxDtls>
+            <Refs>
+              <MsgId>MSG-Return-Muster</MsgId>
+              <AcctSvcrRef>160406CH00NKSQ5N</AcctSvcrRef>
+              <InstrId>Return104A11096849</InstrId>
+            </Refs>
+            <Amt Ccy="CHF">40.00</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <BkTxCd>
+              <Domn>
+                <Cd>PMNT</Cd>
+                <Fmly>
+                  <Cd>ICDT</Cd>
+                  <SubFmlyCd>RRTN</SubFmlyCd>
+                </Fmly>
+              </Domn>
+            </BkTxCd>
+            <RltdPties>
+              <Dbtr>
+                <Nm>Max Mustermann</Nm>
+                <PstlAdr>
+                  <AdrLine>Mustergasse</AdrLine>
+                  <AdrLine>8000 Zuerich</AdrLine>
+                </PstlAdr>
+              </Dbtr>
+              <DbtrAcct>
+                <Id>
+                  <IBAN>CH7408237100000000002</IBAN>
+                </Id>
+              </DbtrAcct>
+            </RltdPties>
+            <RltdAgts>
+              <DbtrAgt>
+                <FinInstnId>
+                  <ClrSysMmbId>
+                    <MmbId>082375</MmbId>
+                  </ClrSysMmbId>
+                  <Nm>BANQUE PRIVEE BCP (SUISSE) SA</Nm>
+                  <PstlAdr>
+                    <AdrLine>Place du Molard 4</AdrLine>
+                    <AdrLine>1211 Genève 3</AdrLine>
+                  </PstlAdr>
+                </FinInstnId>
+              </DbtrAgt>
+            </RltdAgts>
+            <RmtInf>
+              <Ustrd>Return Mitteilung Muster</Ustrd>
+            </RmtInf>
+            <RltdDts>
+              <AccptncDtTm>2016-04-06T20:00:00</AccptncDtTm>
+            </RltdDts>
+            <RtrInf>
+              <Rsn>
+                <Cd>NARR</Cd>
+              </Rsn>
+              <AddtlInf>RETOUR VAL 23.03.2016 BEGUENSTIGTER UNBEKANNT</AddtlInf>
+            </RtrInf>
+          </TxDtls>
+          <TxDtls>
+            <Refs>
+              <MsgId>MSG-Return-Muster</MsgId>
+              <AcctSvcrRef>160406CH00NKSQ5Q</AcctSvcrRef>
+              <InstrId>Return005A11096C3M</InstrId>
+            </Refs>
+            <Amt Ccy="CHF">50.00</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <BkTxCd>
+              <Domn>
+                <Cd>PMNT</Cd>
+                <Fmly>
+                  <Cd>ICDT</Cd>
+                  <SubFmlyCd>RRTN</SubFmlyCd>
+                </Fmly>
+              </Domn>
+            </BkTxCd>
+            <RltdPties>
+              <Dbtr>
+                <Nm>Max Mustermann</Nm>
+                <PstlAdr>
+                  <AdrLine>Mustergasse</AdrLine>
+                  <AdrLine>8000 Zuerich</AdrLine>
+                </PstlAdr>
+              </Dbtr>
+              <DbtrAcct>
+                <Id>
+                  <IBAN>CH7408237100000000002</IBAN>
+                </Id>
+              </DbtrAcct>
+            </RltdPties>
+            <RltdAgts>
+              <DbtrAgt>
+                <FinInstnId>
+                  <ClrSysMmbId>
+                    <MmbId>082375</MmbId>
+                  </ClrSysMmbId>
+                  <Nm>BANQUE PRIVEE BCP (SUISSE) SA</Nm>
+                  <PstlAdr>
+                    <AdrLine>Place du Molard 4</AdrLine>
+                    <AdrLine>1211 Genève 3</AdrLine>
+                  </PstlAdr>
+                </FinInstnId>
+              </DbtrAgt>
+            </RltdAgts>
+            <RmtInf>
+              <Ustrd>Mitteilung Return Mitteilung</Ustrd>
+            </RmtInf>
+            <RltdDts>
+              <AccptncDtTm>2016-04-06T20:00:00</AccptncDtTm>
+            </RltdDts>
+            <RtrInf>
+              <Rsn>
+                <Cd>NARR</Cd>
+              </Rsn>
+              <AddtlInf>RETOUR VAL 23.03.2016 BEGUENSTIGTER UNBEKANNT</AddtlInf>
+            </RtrInf>
+          </TxDtls>
+        </NtryDtls>
+        <AddtlNtryInf>SAMMELGUTSCHRIFT RETOUREN VERARBEITUNG VOM 06.04.2016 PAKET ID: 160406CH0000005Q</AddtlNtryInf>
+      </Ntry>
+      <Ntry>
+        <NtryRef>41107767420881932</NtryRef>
+        <Amt Ccy="CHF">24.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <RvslInd>false</RvslInd>
+        <Sts>BOOK</Sts>
+        <BookgDt>
+          <Dt>2016-04-10</Dt>
+        </BookgDt>
+        <ValDt>
+          <Dt>2016-04-10</Dt>
+        </ValDt>
+        <AcctSvcrRef>20160410375244000000000000000081</AcctSvcrRef>
+        <BkTxCd>
+          <Domn>
+            <Cd>PMNT</Cd>
+            <Fmly>
+              <Cd>RDDT</Cd>
+              <SubFmlyCd>PMDD</SubFmlyCd>
+            </Fmly>
+          </Domn>
+        </BkTxCd>
+        <NtryDtls>
+          <Btch>
+            <NbOfTxs>2</NbOfTxs>
+          </Btch>
+          <TxDtls>
+            <Refs>
+              <AcctSvcrRef>TST_201-2091644-9</AcctSvcrRef>
+              <PmtInfId>PMTINF-1CHDDBB3</PmtInfId>
+              <InstrId>INSTR-CRDBRActSame-1B9C-CHDDBB2</InstrId>
+              <EndToEndId>EndToEnd-CRDBRActSame-1B9C-CHDDBB2</EndToEndId>
+            </Refs>
+            <Amt Ccy="CHF">15.00</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <BkTxCd>
+              <Domn>
+                <Cd>PMNT</Cd>
+                <Fmly>
+                  <Cd>RDDT</Cd>
+                  <SubFmlyCd>PMDD</SubFmlyCd>
+                </Fmly>
+              </Domn>
+            </BkTxCd>
+            <RltdPties>
+              <Dbtr>
+                <Nm>Rutschmann Pia</Nm>
+                <PstlAdr>
+                  <StrtNm>Marktgasse</StrtNm>
+                  <BldgNb>28</BldgNb>
+                  <PstCd>9400</PstCd>
+                  <TwnNm>Rorschach</TwnNm>
+                  <Ctry>CH</Ctry>
+                </PstlAdr>
+              </Dbtr>
+              <DbtrAcct>
+                <Id>
+                  <IBAN>CH4409000000495962779</IBAN>
+                </Id>
+              </DbtrAcct>
+            </RltdPties>
+            <RmtInf>
+              <Ustrd>Mitteilung 132</Ustrd>
+            </RmtInf>
+            <RltdDts>
+              <AccptncDtTm>2016-04-10T20:00:00</AccptncDtTm>
+            </RltdDts>
+          </TxDtls>
+          <TxDtls>
+            <Refs>
+              <AcctSvcrRef>TST_201-2091644-8</AcctSvcrRef>
+              <PmtInfId>PMTINF-1CHDDBB3</PmtInfId>
+              <InstrId>INSTR-CRDBRActSame-1B9C-CHDDBB3</InstrId>
+              <EndToEndId>EndToEnd-CRDBRActSame-1B9C-CHDDBB3</EndToEndId>
+            </Refs>
+            <Amt Ccy="CHF">9.00</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <BkTxCd>
+              <Domn>
+                <Cd>PMNT</Cd>
+                <Fmly>
+                  <Cd>RDDT</Cd>
+                  <SubFmlyCd>PMDD</SubFmlyCd>
+                </Fmly>
+              </Domn>
+            </BkTxCd>
+            <RltdPties>
+              <Dbtr>
+                <Nm>Bernasconi Maria</Nm>
+                <PstlAdr>
+                  <PstCd>2502</PstCd>
+                  <TwnNm>Biel/Bienne</TwnNm>
+                  <Ctry>CH</Ctry>
+                </PstlAdr>
+              </Dbtr>
+              <DbtrAcct>
+                <Id>
+                  <IBAN>CH3709000000250094580</IBAN>
+                </Id>
+              </DbtrAcct>
+            </RltdPties>
+            <RmtInf>
+              <Ustrd>Mitteilung 131</Ustrd>
+            </RmtInf>
+            <RltdDts>
+              <AccptncDtTm>2016-04-10T20:00:00</AccptncDtTm>
+            </RltdDts>
+          </TxDtls>
+        </NtryDtls>
+        <AddtlNtryInf>GUTSCHRIFT CH-DD-BASISLASTSCHRIFT ID: 41107767420881932 REFERENZ-NR: PMTINF-1CHDDBB3</AddtlNtryInf>
+      </Ntry>
+      <Ntry>
+        <NtryRef>41107767420881932</NtryRef>
+        <Amt Ccy="CHF">56.56</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <RvslInd>false</RvslInd>
+        <Sts>BOOK</Sts>
+        <BookgDt>
+          <Dt>2016-04-10</Dt>
+        </BookgDt>
+        <ValDt>
+          <Dt>2016-04-10</Dt>
+        </ValDt>
+        <AcctSvcrRef>20160410375244000000000000000071</AcctSvcrRef>
+        <BkTxCd>
+          <Domn>
+            <Cd>PMNT</Cd>
+            <Fmly>
+              <Cd>RDDT</Cd>
+              <SubFmlyCd>PMDD</SubFmlyCd>
+            </Fmly>
+          </Domn>
+        </BkTxCd>
+        <NtryDtls>
+          <Btch>
+            <NbOfTxs>1</NbOfTxs>
+          </Btch>
+          <TxDtls>
+            <Refs>
+              <AcctSvcrRef>TST_201-13113-5</AcctSvcrRef>
+              <PmtInfId>PMT-ID-1268016165-01</PmtInfId>
+              <InstrId>PMT-651727380907030005</InstrId>
+              <EndToEndId>PMT-651727380907030005</EndToEndId>
+            </Refs>
+            <Amt Ccy="CHF">56.56</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <BkTxCd>
+              <Domn>
+                <Cd>PMNT</Cd>
+                <Fmly>
+                  <Cd>RDDT</Cd>
+                  <SubFmlyCd>PMDD</SubFmlyCd>
+                </Fmly>
+              </Domn>
+            </BkTxCd>
+            <RltdPties>
+              <Dbtr>
+                <Nm>Bernasconi Maria</Nm>
+                <PstlAdr>
+                  <PstCd>2502</PstCd>
+                  <TwnNm>Biel/Bienne</TwnNm>
+                  <Ctry>CH</Ctry>
+                </PstlAdr>
+              </Dbtr>
+              <DbtrAcct>
+                <Id>
+                  <IBAN>CH3709000000250094580</IBAN>
+                </Id>
+              </DbtrAcct>
+            </RltdPties>
+            <Purp>
+              <Cd>CORT</Cd>
+            </Purp>
+            <RltdDts>
+              <AccptncDtTm>2016-04-10T20:00:00</AccptncDtTm>
+            </RltdDts>
+          </TxDtls>
+        </NtryDtls>
+        <AddtlNtryInf>GUTSCHRIFT CH-DD-BASISLASTSCHRIFT ID: 41107767420881932 REFERENZ-NR: PMT-ID-1268016165-01</AddtlNtryInf>
+      </Ntry>
+      <Ntry>
+        <NtryRef>41107767420881932</NtryRef>
+        <Amt Ccy="CHF">6.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <RvslInd>true</RvslInd>
+        <Sts>BOOK</Sts>
+        <BookgDt>
+          <Dt>2016-04-10</Dt>
+        </BookgDt>
+        <ValDt>
+          <Dt>2016-04-10</Dt>
+        </ValDt>
+        <AcctSvcrRef>20160410375244000000000000000082</AcctSvcrRef>
+        <BkTxCd>
+          <Domn>
+            <Cd>PMNT</Cd>
+            <Fmly>
+              <Cd>IDDT</Cd>
+              <SubFmlyCd>PRDD</SubFmlyCd>
+            </Fmly>
+          </Domn>
+        </BkTxCd>
+        <Chrgs>
+          <TtlChrgsAndTaxAmt Ccy="CHF">0.70</TtlChrgsAndTaxAmt>
+          <Rcrd>
+            <Amt Ccy="CHF">0.70</Amt>
+            <CdtDbtInd>DBIT</CdtDbtInd>
+            <ChrgInclInd>false</ChrgInclInd>
+            <Tp>
+              <Prtry>
+                <Id>9</Id>
+              </Prtry>
+            </Tp>
+          </Rcrd>
+        </Chrgs>
+        <NtryDtls>
+          <Btch>
+            <NbOfTxs>1</NbOfTxs>
+          </Btch>
+          <TxDtls>
+            <Refs>
+              <AcctSvcrRef>TST_205-2091679-6</AcctSvcrRef>
+              <PmtInfId>PMTINF-2CHDDBB5</PmtInfId>
+              <InstrId>INSTR-2B6C-CHDDBB5</InstrId>
+              <EndToEndId>EndToEnd-2B6C-CHDDBB5</EndToEndId>
+            </Refs>
+            <Amt Ccy="CHF">6.00</Amt>
+            <CdtDbtInd>DBIT</CdtDbtInd>
+            <BkTxCd>
+              <Domn>
+                <Cd>PMNT</Cd>
+                <Fmly>
+                  <Cd>RDDT</Cd>
+                  <SubFmlyCd>PMDD</SubFmlyCd>
+                </Fmly>
+              </Domn>
+            </BkTxCd>
+            <Chrgs>
+              <TtlChrgsAndTaxAmt Ccy="CHF">0.70</TtlChrgsAndTaxAmt>
+              <Rcrd>
+                <Amt Ccy="CHF">0.70</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <ChrgInclInd>false</ChrgInclInd>
+                <Tp>
+                  <Prtry>
+                    <Id>9</Id>
+                  </Prtry>
+                </Tp>
+              </Rcrd>
+            </Chrgs>
+            <RltdPties>
+              <Dbtr>
+                <Nm>Bernasconi Maria</Nm>
+                <PstlAdr>
+                  <PstCd>2502</PstCd>
+                  <TwnNm>Biel/Bienne</TwnNm>
+                  <Ctry>CH</Ctry>
+                </PstlAdr>
+              </Dbtr>
+              <DbtrAcct>
+                <Id>
+                  <IBAN>CH3709000000250094580</IBAN>
+                </Id>
+              </DbtrAcct>
+            </RltdPties>
+            <RltdAgts>
+              <DbtrAgt>
+                <FinInstnId>
+                  <BICFI>POFICHBEXXX</BICFI>
+                  <Nm>POSTFINANCE AG</Nm>
+                  <PstlAdr>
+                    <StrtNm>Mingerstrasse</StrtNm>
+                    <BldgNb>20</BldgNb>
+                    <PstCd>3030</PstCd>
+                    <TwnNm>Bern</TwnNm>
+                    <Ctry>CH</Ctry>
+                  </PstlAdr>
+                </FinInstnId>
+              </DbtrAgt>
+            </RltdAgts>
+            <RmtInf>
+              <Ustrd>Mitteilung 128</Ustrd>
+            </RmtInf>
+            <RtrInf>
+              <Rsn>
+                <Cd>MD06</Cd>
+              </Rsn>
+              <AddtlInf>Lastschrift-Widerspruch durch den Zahlungspflichtigen</AddtlInf>
+            </RtrInf>
+          </TxDtls>
+        </NtryDtls>
+        <AddtlNtryInf>RÜCKBELASTUNG (REFUND) CHDD-BASISLASTSCHRIFT ID: 41107767420881932 REFERENZ-NR: PMTINF-2CHDDBB5 ZAHLUNGSPFLICHTIGER BERNASCONI MARIA MITTEILUNGEN: MD06 Lastschrift-Widerspruch durch den Zahlungspflichtigen</AddtlNtryInf>
+      </Ntry>
+      <Ntry>
+        <NtryRef>41107767420881932</NtryRef>
+        <Amt Ccy="CHF">15.53</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <RvslInd>true</RvslInd>
+        <Sts>BOOK</Sts>
+        <BookgDt>
+          <Dt>2016-04-10</Dt>
+        </BookgDt>
+        <ValDt>
+          <Dt>2016-04-10</Dt>
+        </ValDt>
+        <AcctSvcrRef>20160410375244000000000000000072</AcctSvcrRef>
+        <BkTxCd>
+          <Domn>
+            <Cd>PMNT</Cd>
+            <Fmly>
+              <Cd>RDDT</Cd>
+              <SubFmlyCd>PRDD</SubFmlyCd>
+            </Fmly>
+          </Domn>
+        </BkTxCd>
+        <Chrgs>
+          <TtlChrgsAndTaxAmt Ccy="CHF">0.70</TtlChrgsAndTaxAmt>
+          <Rcrd>
+            <Amt Ccy="CHF">0.70</Amt>
+            <CdtDbtInd>DBIT</CdtDbtInd>
+            <ChrgInclInd>false</ChrgInclInd>
+            <Tp>
+              <Prtry>
+                <Id>9</Id>
+              </Prtry>
+            </Tp>
+          </Rcrd>
+        </Chrgs>
+        <NtryDtls>
+          <Btch>
+            <NbOfTxs>1</NbOfTxs>
+          </Btch>
+          <TxDtls>
+            <Refs>
+              <AcctSvcrRef>TST_205-28529-1</AcctSvcrRef>
+              <PmtInfId>SID-1-160309134053s4C</PmtInfId>
+              <InstrId>IID-1-1-160309134053s4C</InstrId>
+              <EndToEndId>E2E-1-1-16030913</EndToEndId>
+            </Refs>
+            <Amt Ccy="CHF">15.53</Amt>
+            <CdtDbtInd>DBIT</CdtDbtInd>
+            <BkTxCd>
+              <Domn>
+                <Cd>PMNT</Cd>
+                <Fmly>
+                  <Cd>RDDT</Cd>
+                  <SubFmlyCd>PRDD</SubFmlyCd>
+                </Fmly>
+              </Domn>
+            </BkTxCd>
+            <Chrgs>
+              <TtlChrgsAndTaxAmt Ccy="CHF">0.70</TtlChrgsAndTaxAmt>
+              <Rcrd>
+                <Amt Ccy="CHF">0.70</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <ChrgInclInd>false</ChrgInclInd>
+                <Tp>
+                  <Prtry>
+                    <Id>9</Id>
+                  </Prtry>
+                </Tp>
+              </Rcrd>
+            </Chrgs>
+            <RltdPties>
+              <Dbtr>
+                <Nm>Rutschmann Pia</Nm>
+                <PstlAdr>
+                  <StrtNm>Marktgasse</StrtNm>
+                  <BldgNb>28</BldgNb>
+                  <PstCd>9400</PstCd>
+                  <TwnNm>Rorschach</TwnNm>
+                  <Ctry>CH</Ctry>
+                </PstlAdr>
+              </Dbtr>
+              <DbtrAcct>
+                <Id>
+                  <IBAN>CH4409000000495962779</IBAN>
+                </Id>
+              </DbtrAcct>
+            </RltdPties>
+            <RltdAgts>
+              <DbtrAgt>
+                <FinInstnId>
+                  <Nm>POSTFINANCE AG</Nm>
+                  <PstlAdr>
+                    <StrtNm>Mingerstrasse</StrtNm>
+                    <BldgNb>20</BldgNb>
+                    <PstCd>3030</PstCd>
+                    <TwnNm>Bern</TwnNm>
+                    <Ctry>CH</Ctry>
+                  </PstlAdr>
+                </FinInstnId>
+              </DbtrAgt>
+            </RltdAgts>
+            <RmtInf>
+              <Ustrd>Mitteilung 134-</Ustrd>
+            </RmtInf>
+            <RtrInf>
+              <Rsn>
+                <Cd>MD06</Cd>
+              </Rsn>
+              <AddtlInf>Lastschrift-Widerspruch durch den Zahlungspflichtigen</AddtlInf>
+            </RtrInf>
+          </TxDtls>
+        </NtryDtls>
+        <AddtlNtryInf>RÜCKBELASTUNG (REFUND) CHDD-BASISLASTSCHRIFT ID: 41107767420881932 REFERENZ-NR: SID-1-160309134053s4C ZAHLUNGSPFLICHTIGER RUTSCHMANN PIA MITTEILUNGEN: MD06 Lastschrift-Widerspruch durch den Zahlungspflichtigen</AddtlNtryInf>
+      </Ntry>
+    </Stmt>
+  </BkToCstmrStmt>
+</Document>

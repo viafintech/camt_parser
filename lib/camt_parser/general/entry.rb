@@ -58,6 +58,10 @@ module CamtParser
     end
     alias_method :description, :additional_information
 
+    def charges
+      @charges ||= CamtParser::Charges.new(@xml_data.xpath('Chrgs'))
+    end
+
     private
 
     def parse_transactions
