@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    camt_parser (2.1.0)
+    camt_parser (2.2.0)
       nokogiri
 
 GEM
@@ -39,3 +39,6 @@ DEPENDENCIES
   rake (~> 10.4.2)
   rspec (~> 3.3.0)
   rspec_junit_formatter (~> 0.2.2)
+
+BUNDLED WITH
+   1.14.6
