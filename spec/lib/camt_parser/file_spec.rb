@@ -5,7 +5,7 @@ describe CamtParser::File do
     it "raises an exception if the namespace/format is unknown" do
       expect{
         described_class.parse 'spec/fixtures/general/invalid_namespace.xml'
-      }.to raise_exception(CamtParser::Errors::UnsupportedNamespaceError, 'urn:iso:std:iso:20022:tech:xsd:camt.053.002.03')
+      }.to raise_exception(CamtParser::Errors::UnsupportedNamespaceError, 'urn:iso:std:iso:20022:tech:xsd:camt.053.001.03')
     end
 
     it "does not raise an exception for a valid 052 namespace" do
