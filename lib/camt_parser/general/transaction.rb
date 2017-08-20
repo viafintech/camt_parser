@@ -85,6 +85,10 @@ module CamtParser
       @mandate_reference ||= @xml_data.xpath('Refs/MndtId/text()').text
     end
 
+    def creditor_reference # May be missing
+      @creditor_reference ||= @xml_data.xpath('RmtInf/Strd/CdtrRefInf/Ref/text()').text
+    end
+
     def transaction_id # May be missing
       @transaction_id ||= @xml_data.xpath('Refs/TxId/text()').text
     end

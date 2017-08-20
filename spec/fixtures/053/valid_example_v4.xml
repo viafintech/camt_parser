@@ -351,7 +351,7 @@
                       <Prtry>ISR Reference</Prtry>
                     </CdOrPrtry>
                   </Tp>
-                  <Ref>000000000002015110002913192</Ref>
+                  <Ref>CreditorReference</Ref>
                 </CdtrRefInf>
                 <AddtlRmtInf>?REJECT?0</AddtlRmtInf>
               </Strd>
