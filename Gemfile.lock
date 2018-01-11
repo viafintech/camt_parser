@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    camt_parser (2.3.4)
+    camt_parser (2.3.5)
       nokogiri
 
 GEM
@@ -9,9 +9,9 @@ GEM
   specs:
     builder (3.2.2)
     diff-lcs (1.2.5)
-    mini_portile2 (2.2.0)
-    nokogiri (1.8.0)
-      mini_portile2 (~> 2.2.0)
+    mini_portile2 (2.3.0)
+    nokogiri (1.8.1)
+      mini_portile2 (~> 2.3.0)
     rake (10.4.2)
     rspec (3.3.0)
       rspec-core (~> 3.3.0)
@@ -41,4 +41,4 @@ DEPENDENCIES
   rspec_junit_formatter (~> 0.2.2)
 
 BUNDLED WITH
-   1.15.3
+   1.16.0
