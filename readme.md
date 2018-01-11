@@ -19,7 +19,7 @@ Fields that we did not need for our use-cases are simply ignored for now.
 ## Example for camt053
 ```ruby
 camt = CamtParser::File.parse path_to_file
-puts camt.group_headers.creation_date_time
+puts camt.group_header.creation_date_time
 camt.statements.each do |statement|
     puts statement.account.iban
     statement.entries.each do |entry|
