@@ -11,7 +11,9 @@ Fields that we did not need for our use-cases are simply ignored for now.
 
 1. add the Gem to the Gemfile
 
-        gem 'camt_parser'
+```ruby
+gem 'camt_parser'
+```
 
 2. Require the Gem at any point before using it
 3. Use it!
@@ -21,12 +23,12 @@ Fields that we did not need for our use-cases are simply ignored for now.
 camt = CamtParser::File.parse path_to_file
 puts camt.group_header.creation_date_time
 camt.statements.each do |statement|
-    puts statement.account.iban
-    statement.entries.each do |entry|
-        # Access individual entries/bank transfers
-        puts entry.amount
-        puts entry.debitor.iban
-    end
+  puts statement.account.iban
+  statement.entries.each do |entry|
+    # Access individual entries/bank transfers
+    puts entry.amount
+    puts entry.debitor.iban
+  end
 end
 ```
 
