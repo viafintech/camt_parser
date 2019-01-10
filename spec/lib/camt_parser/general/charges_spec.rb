@@ -6,5 +6,5 @@ describe CamtParser::Charges do
   let(:ex_charges) { entries[6].charges }
 
   specify { expect(entries.map(&:charges)).to all(be_kind_of(described_class)) }
-  specify { expect(ex_charges.total_charges_and_tax_amount).to eq(BigDecimal.new('5.2')) }
+  specify { expect(ex_charges.total_charges_and_tax_amount).to eq(BigDecimal('5.2')) }
 end

@@ -14,7 +14,7 @@ describe CamtParser::Transaction do
 
     context '#amount' do
       specify { expect(ex_transaction.amount).to be_kind_of(BigDecimal) }
-      specify { expect(ex_transaction.amount).to eq(BigDecimal.new('2')) }
+      specify { expect(ex_transaction.amount).to eq(BigDecimal('2')) }
       specify { expect(ex_transaction.amount_in_cents).to eq(200) }
     end
 
@@ -51,7 +51,7 @@ describe CamtParser::Transaction do
 
     context '#amount' do
       specify { expect(ex_transaction.amount).to be_kind_of(BigDecimal) }
-      specify { expect(ex_transaction.amount).to eq(BigDecimal.new('100')) }
+      specify { expect(ex_transaction.amount).to eq(BigDecimal('100')) }
       specify { expect(ex_transaction.amount_in_cents).to eq(10000) }
     end
 

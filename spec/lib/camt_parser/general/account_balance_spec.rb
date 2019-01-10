@@ -10,10 +10,10 @@ describe CamtParser::AccountBalance do
   specify { expect(subject.date).to eq Date.new(2013, 12, 27) }
   specify { expect(subject.sign).to eq 1 }
   specify { expect(subject.credit?).to be_truthy }
-  specify { expect(subject.amount).to eq BigDecimal.new("33.06") }
+  specify { expect(subject.amount).to eq BigDecimal("33.06") }
   specify { expect(subject.amount_in_cents).to eq(3306) }
   specify { expect(subject.to_h).to eq({
-    'amount'          => BigDecimal.new('33.06'),
+    'amount'          => BigDecimal('33.06'),
     'amount_in_cents' => 3306,
     'sign'            => 1
   }) }

@@ -11,7 +11,7 @@ describe CamtParser::Entry do
 
   context '#amount' do
     specify { expect(ex_entry.amount).to be_kind_of(BigDecimal) }
-    specify { expect(ex_entry.amount).to eq(BigDecimal.new('2')) }
+    specify { expect(ex_entry.amount).to eq(BigDecimal('2')) }
     specify { expect(ex_entry.amount_in_cents).to eq(200) }
   end
 

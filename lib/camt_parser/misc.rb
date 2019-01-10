@@ -6,7 +6,7 @@ module CamtParser
       end
 
       def to_amount(value)
-        BigDecimal.new value.gsub(',', '.')
+        BigDecimal value.gsub(',', '.')
       end
     end
   end
