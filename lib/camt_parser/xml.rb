@@ -11,6 +11,8 @@ module CamtParser
         return CamtParser::Format052::Base.new(doc.xpath('Document'))
       when 'urn:iso:std:iso:20022:tech:xsd:camt.053.001.02', 'urn:iso:std:iso:20022:tech:xsd:camt.053.001.04'
         return CamtParser::Format053::Base.new(doc.xpath('Document'))
+      when 'ISO:camt.053.001.02:APC:STUZZA:payments:003'
+        return CamtParser::Format053::Base.new(doc.xpath('Document'))
       when 'urn:iso:std:iso:20022:tech:xsd:camt.054.001.02', 'urn:iso:std:iso:20022:tech:xsd:camt.054.001.04'
         return CamtParser::Format054::Base.new(doc.xpath('Document'))
       else
