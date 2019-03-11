@@ -35,6 +35,17 @@ end
 Please check the code for fields not mentioned here.
 Also check the code for camt052 and camt054.
 
+## Registering new namespaces
+In case you have to parse a namespace which is generally compatible with any of the camt parsers, it is possible to register additional namespaces, without requiring a change to this gem.
+```ruby
+# Registering a new camt052 namespace
+CamtParser::Xml.register('<your namespace>', :camt052)
+# Registering a new camt053 namespace
+CamtParser::Xml.register('<your namespace>', :camt053)
+# Registering a new camt054 namespace
+CamtParser::Xml.register('<your namespace>', :camt054)
+```
+
 ## Bugs and Contribution
 For bugs and feature requests open an issue on Github. For code contributions fork the repo, make your changes and create a pull request.
 

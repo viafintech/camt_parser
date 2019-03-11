@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    camt_parser (2.3.6)
+    camt_parser (2.4.0)
       nokogiri
 
 GEM
