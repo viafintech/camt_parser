@@ -101,6 +101,10 @@ module CamtParser
       @payment_information ||= @xml_data.xpath('Refs/PmtInfId/text()').text
     end
 
+    def additional_information # May be missing
+      @addition_information ||= @xml_data.xpath('AddtlTxInf/text()').text
+    end
+
     private
 
     def parse_amount
