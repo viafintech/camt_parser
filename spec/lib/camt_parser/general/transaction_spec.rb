@@ -38,6 +38,9 @@ describe CamtParser::Transaction do
     specify { expect(ex_transaction.transaction_id).to eq("UniqueTransactionId") }
     specify { expect(ex_transaction.creditor_identifier).to eq("CreditorIdentifier") }
     specify { expect(ex_transaction.payment_information).to eq("PaymentIdentification") }
+    specify {
+      expect(ex_transaction.additional_information).to eq("AdditionalTransactionInformation")
+    }
   end
 
   context 'version 4' do

@@ -78,6 +78,7 @@
             <PmtInfId>PaymentIdentification</PmtInfId>
             <TxId>UniqueTransactionId</TxId>
           </Refs>
+          <AddtlTxInf>AdditionalTransactionInformation</AddtlTxInf>
           <BkTxCd>
             <Prtry>
               <Cd>NTRF+020</Cd>
