@@ -29,6 +29,10 @@ module CamtParser
       @booking_date ||= Date.parse(@xml_data.xpath('BookgDt/Dt/text()').text)
     end
 
+    def bank_reference # May be missing
+      @bank_reference ||= @xml_data.xpath('AcctSvcrRef/text()').text
+    end
+
     def transactions
       @transactions ||= parse_transactions
     end

@@ -20,11 +20,12 @@ describe CamtParser::Entry do
   specify { expect(ex_entry.value_date).to eq(Date.new(2013, 12, 27)) }
   specify { expect(ex_entry.booking_date).to be_kind_of(Date) }
   specify { expect(ex_entry.booking_date).to eq(Date.new(2013, 12, 27)) }
-  specify { expect(ex_entry.additional_information).to eq("Überweisungs-Gutschrift; GVC: SEPA Credit Transfer (Einzelbuchung-Haben)") }
+  specify { expect(ex_entry.additional_information).to eq('Überweisungs-Gutschrift; GVC: SEPA Credit Transfer (Einzelbuchung-Haben)') }
   specify { expect(ex_entry.description).to eq(ex_entry.additional_information) }
   specify { expect(ex_entry.debit).to eq(true) }
   specify { expect(ex_entry.debit?).to eq(ex_entry.debit) }
   specify { expect(ex_entry.credit?).to eq(false) }
   specify { expect(ex_entry.sign).to eq(-1) }
   specify { expect(ex_entry.transactions).to all(be_kind_of(CamtParser::Transaction)) }
+  specify { expect(ex_entry.bank_reference).to eq('2013122710583450000') }
 end
