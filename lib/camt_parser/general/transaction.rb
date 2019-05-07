@@ -108,7 +108,7 @@ module CamtParser
     private
 
     def parse_amount
-      @amount = if @xml_data.xpath('Amt').any?
+      if @xml_data.xpath('Amt').any?
         @xml_data.xpath('Amt/text()').text
       elsif @xml_data.xpath('AmtDtls').any?
         @xml_data.xpath('AmtDtls/TxAmt/Amt/text()').text
@@ -118,7 +118,7 @@ module CamtParser
     end
 
     def parse_currency
-      @currenty = if @xml_data.xpath('Amt').any?
+      if @xml_data.xpath('Amt').any?
         @xml_data.xpath('Amt/@Ccy').text
       elsif @xml_data.xpath('AmtDtls').any?
         @xml_data.xpath('AmtDtls/TxAmt/Amt/@Ccy').text
