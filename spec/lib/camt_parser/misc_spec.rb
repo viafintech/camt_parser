@@ -8,11 +8,15 @@ describe CamtParser::Misc do
     specify { expect(described_class.to_amount_in_cents(dot_value)).to be_kind_of(Integer) }
     specify { expect(described_class.to_amount_in_cents(dot_value)).to eq(3012) }
     specify { expect(described_class.to_amount_in_cents(comma_value)).to eq(3012) }
+    specify { expect(described_class.to_amount_in_cents('')).to eq(nil) }
+    specify { expect(described_class.to_amount_in_cents(nil)).to eq(nil) }
   end
 
   context '#to_amount' do
     specify { expect(described_class.to_amount(dot_value)).to be_kind_of(BigDecimal) }
     specify { expect(described_class.to_amount(dot_value)).to eq(30.12) }
     specify { expect(described_class.to_amount(comma_value)).to eq(30.12) }
+    specify { expect(described_class.to_amount('')).to eq(nil) }
+    specify { expect(described_class.to_amount(nil)).to eq(nil) }
   end
 end
