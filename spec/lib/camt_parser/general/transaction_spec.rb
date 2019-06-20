@@ -16,6 +16,12 @@ describe CamtParser::Transaction do
       specify { expect(ex_transaction.amount).to be_kind_of(BigDecimal) }
       specify { expect(ex_transaction.amount).to eq(BigDecimal('2')) }
       specify { expect(ex_transaction.amount_in_cents).to eq(200) }
+
+      context 'AmtDtls/InstdAmt' do
+        let(:camt) { CamtParser::File.parse('spec/fixtures/053/valid_example_with_instdamt.xml') }
+        specify { expect(ex_transaction.amount).to eq(BigDecimal('4500')) }
+        specify { expect(ex_transaction.amount_in_cents).to eq(450000) }
+      end
     end
 
     specify { expect(ex_transaction.currency).to eq('EUR') }
