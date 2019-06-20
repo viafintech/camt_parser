@@ -24,6 +24,15 @@ describe CamtParser::Transaction do
       end
     end
 
+    context '#currency' do
+      specify { expect(ex_transaction.currency).to eq('EUR') }
+
+      context 'AmtDtls/InstdAmt' do
+        let(:camt) { CamtParser::File.parse('spec/fixtures/053/valid_example_with_instdamt.xml') }
+        specify { expect(ex_transaction.currency).to eq('CHF') }
+      end
+    end
+
     specify { expect(ex_transaction.currency).to eq('EUR') }
     specify { expect(ex_transaction.debit).to eq(true) }
     specify { expect(ex_transaction.debit?).to eq(ex_transaction.debit) }
