@@ -107,6 +107,13 @@
               <InstdAmt>
                 <Amt Ccy="CHF">4500.00</Amt>
               </InstdAmt>
+              <TxAmt>
+                <Amt Ccy="CHF">0.04</Amt>
+              </TxAmt>
+              <PrtryAmt>
+                <Tp>IBS</Tp>
+                <Amt Ccy="CHF">0.03</Amt>
+              </PrtryAmt>
             </AmtDtls>
             <BkTxCd>
               <Domn>

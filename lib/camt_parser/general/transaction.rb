@@ -111,7 +111,7 @@ module CamtParser
       if @xml_data.xpath('Amt').any?
         @xml_data.xpath('Amt/text()').text
       elsif @xml_data.xpath('AmtDtls').any?
-        @xml_data.xpath('AmtDtls//Amt/text()').text
+        @xml_data.xpath('AmtDtls//Amt/text()').first.text
       end
     end
 
@@ -119,7 +119,7 @@ module CamtParser
       if @xml_data.xpath('Amt').any?
         @xml_data.xpath('Amt/@Ccy').text
       elsif @xml_data.xpath('AmtDtls').any?
-        @xml_data.xpath('AmtDtls//Amt/@Ccy').text
+        @xml_data.xpath('AmtDtls//Amt/@Ccy').first.text
       end
     end
   end
