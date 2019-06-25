@@ -65,6 +65,10 @@ module CamtParser
     def charges
       @charges ||= CamtParser::Charges.new(@xml_data.xpath('Chrgs'))
     end
+    
+    def batch_detail
+      @batch_detail ||= @xml_data.xpath('NtryDtls/Btch').empty? ? nil : CamtParser::BatchDetail.new(@xml_data.xpath('NtryDtls/Btch'))
+    end  
 
     private
 
@@ -81,5 +85,6 @@ module CamtParser
 
       @xml_data.xpath('NtryDtls/TxDtls').map { |x| Transaction.new(x, debit?, amt, ccy) }
     end
+    
   end
 end
