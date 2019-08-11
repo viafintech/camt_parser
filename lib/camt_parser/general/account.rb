@@ -15,5 +15,9 @@ module CamtParser
     def bank_name
       @bank_name ||= @xml_data.xpath('Svcr/FinInstnId/Nm/text()').text
     end
+
+    def currency
+      @currency ||= @xml_data.xpath('Ccy/text()').text
+    end
   end
 end
