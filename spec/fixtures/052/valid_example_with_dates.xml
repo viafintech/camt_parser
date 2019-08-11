@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:camt.052.001.02">
+  <BkToCstmrAcctRpt>
+    <GrpHdr>
+      <MsgId>camt.052-2019-08-09-11-17-11</MsgId>
+      <CreDtTm>2019-08-09T11:17:11:735</CreDtTm>
+      <MsgRcpt>
+        <Nm>Test User</Nm>
+        <PstlAdr>
+          <StrtNm>Test street</StrtNm>
+          <BldgNb>1</BldgNb>
+          <TwnNm>Test town</TwnNm>
+          <PstCd>11111</PstCd>
+          <Ctry>GB</Ctry>
+        </PstlAdr>
+      </MsgRcpt>
+    </GrpHdr>
+    <Rpt>
+      <Id>1234567890-2019-08-09-11-17-11</Id>
+      <CreDtTm>2019-08-09T11:17:11:735</CreDtTm>
+      <FrToDt>
+        <FrDtTm>2013-01-01T00:00:00:000</FrDtTm>
+        <ToDtTm>2019-08-09T00:00:00:000</ToDtTm>
+      </FrToDt>
+      <Acct>
+        <Id>
+          <Othr>
+            <Id>0000000000000001</Id>
+          </Othr>
+        </Id>
+        <Ccy>EUR</Ccy>
+        <Svcr>
+          <FinInstnId>
+            <BICFI>TESTBKGB</BICFI>
+            <Nm>Test bank</Nm>
+            <Othr>
+              <Id>1234</Id>
+            </Othr>
+          </FinInstnId>
+        </Svcr>
+      </Acct>
+      <Ntry>
+        <Amt Ccy="EUR">5.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts>BOOK</Sts>
+        <ValDt>
+          <Dt>2019-07-19</Dt>
+        </ValDt>
+        <BkTxCd>
+          <Prtry>
+            <Cd>00000000000</Cd>
+            <Issr>Test Banking Association</Issr>
+          </Prtry>
+        </BkTxCd>
+        <NtryDtls>
+          <TxDtls>
+            <Refs>
+              <AcctSvcrRef>0000000AA000000</AcctSvcrRef>
+            </Refs>
+            <Amt Ccy="EUR">5.00</Amt>
+            <CdtDbtInd>DBIT</CdtDbtInd>
+            <RltdPties>
+              <CdtrAcct>
+                <Id>
+                  <Othr>
+                    <Id>0000000000000000</Id>
+                  </Othr>
+                </Id>
+                <Nm>CARD TRANSACTIONS EUR</Nm>
+              </CdtrAcct>
+              <Cdtr>
+                <Nm>PAYPAL - TEST/000000</Nm>
+                <PstlAdr>
+                  <Ctry>LUX</Ctry>
+                </PstlAdr>
+              </Cdtr>
+            </RltdPties>
+            <RltdAgts>
+              <CdtrAgt>
+                <FinInstnId>
+                  <Othr>
+                    <Id>1234</Id>
+                  </Othr>
+                </FinInstnId>
+              </CdtrAgt>
+            </RltdAgts>
+            <RmtInf>
+            </RmtInf>
+          </TxDtls>
+        </NtryDtls>
+      </Ntry>
+    </Rpt>
+  </BkToCstmrAcctRpt>
+</Document>

@@ -25,6 +25,14 @@ module CamtParser
         @legal_sequence_number ||= @xml_data.xpath('LglSeqNb/text()').text
       end
 
+      def from_date_time
+        @from_date_time ||= (x = @xml_data.xpath('FrToDt/FrDtTm')).empty? ? nil : Time.parse(x.first.content)
+      end
+
+      def to_date_time
+        @to_date_time ||= (x = @xml_data.xpath('FrToDt/ToDtTm')).empty? ? nil : Time.parse(x.first.content)
+      end
+
       def opening_balance
         @opening_balance ||= begin
           bal = @xml_data.xpath('Bal/Tp//Cd[contains(text(), "PRCD")]').first.ancestors('Bal')
