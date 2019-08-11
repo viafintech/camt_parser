@@ -9,5 +9,6 @@ describe CamtParser::Account do
   specify { expect(account.iban).to eq("DE14740618130000033626") }
   specify { expect(account.bic).to eq("GENODEF1PFK") }
   specify { expect(account.bank_name).to eq("VR-Bank Rottal-Inn eG") }
+  specify { expect(account.currency).to eq("EUR") }
 end
 
