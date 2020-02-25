@@ -105,6 +105,10 @@ module CamtParser
       @addition_information ||= @xml_data.xpath('AddtlTxInf/text()').text
     end
 
+    def reason_code # May be missing
+      @reason_code ||= @xml_data.xpath('RtrInf/Rsn/Cd/text()').text
+    end
+
     private
 
     def parse_amount

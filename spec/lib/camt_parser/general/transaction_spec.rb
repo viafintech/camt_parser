@@ -73,6 +73,12 @@ describe CamtParser::Transaction do
       specify { expect(ex_transaction.amount_in_cents).to eq(10000) }
     end
 
+    context '#reason_code' do
+      let(:ex_entry) { entries[12] }
+
+      specify { expect(ex_transaction.reason_code).to eq("MD06") }
+    end
+
     specify { expect(ex_transaction.creditor_reference).to eq("CreditorReference") }
   end
 end
