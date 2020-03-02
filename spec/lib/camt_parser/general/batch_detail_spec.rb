@@ -10,4 +10,5 @@ describe CamtParser::BatchDetail do
   
   specify { expect(batch_detail.payment_information_identification).to eq("O0OpeAYTkhjerKu3eE9asw") }
   specify { expect(batch_detail.number_of_transactions).to eq("3") }
+  specify { expect(batch_detail.msg_id).to eq('02453b1e-7c11-4107-a777-ad9c273b4149') }
 end
