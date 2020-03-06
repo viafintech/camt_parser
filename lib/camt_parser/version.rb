@@ -1,3 +1,3 @@
 module CamtParser
-  VERSION = '2.9.0'.freeze
+  VERSION = '2.10.0'.freeze
 end
