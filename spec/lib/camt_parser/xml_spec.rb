@@ -2,7 +2,7 @@ require 'spec_helper'
 
 require 'securerandom'
 
-describe CamtParser::Xml do
+RSpec.describe CamtParser::Xml do
   def parse_xml(file)
     File.open file do |f|
       Nokogiri::XML.parse f

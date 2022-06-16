@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe CamtParser::Account do
+RSpec.describe CamtParser::Account do
   let(:camt)       { CamtParser::File.parse('spec/fixtures/053/valid_example.xml') }
   let(:statements) { camt.statements }
   let(:ex_stmt)    { camt.statements[0] }

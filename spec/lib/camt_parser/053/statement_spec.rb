@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe CamtParser::Format053::Statement do
+RSpec.describe CamtParser::Format053::Statement do
   context 'version 2' do
     let(:camt)       { CamtParser::File.parse('spec/fixtures/053/valid_example.xml') }
     let(:statements) { camt.statements }

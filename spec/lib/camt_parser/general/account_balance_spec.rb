@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe CamtParser::AccountBalance do
+RSpec.describe CamtParser::AccountBalance do
   let(:camt)       { CamtParser::File.parse('spec/fixtures/053/valid_example.xml') }
   let(:statements) { camt.statements }
   let(:ex_stmt)    { camt.statements[0] }

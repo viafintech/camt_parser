@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe CamtParser::Format052::Report do
+RSpec.describe CamtParser::Format052::Report do
   let(:camt)    { CamtParser::File.parse('spec/fixtures/052/valid_example.xml') }
   let(:reports) { camt.reports }
   let(:ex_rpt)  { camt.reports[0] }

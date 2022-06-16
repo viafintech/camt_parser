@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe CamtParser::Misc do
+RSpec.describe CamtParser::Misc do
   let(:dot_value) { "30.12" }
   let(:comma_value) { "30,12" }
   let(:integer_value) { "1" }

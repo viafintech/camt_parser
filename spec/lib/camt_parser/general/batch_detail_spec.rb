@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe CamtParser::BatchDetail do
+RSpec.describe CamtParser::BatchDetail do
   let(:camt)       { CamtParser::File.parse('spec/fixtures/053/valid_example_with_batch.xml') }
   let(:statements)     { camt.statements }
   let(:ex_stmt)        { statements[0] }
