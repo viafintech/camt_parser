@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe CamtParser::Format054::Base do
+RSpec.describe CamtParser::Format054::Base do
   context 'initialization' do
     after do
       CamtParser::File.parse 'spec/fixtures/054/valid_example.xml'

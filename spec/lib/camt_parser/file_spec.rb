@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe CamtParser::File do
+RSpec.describe CamtParser::File do
   context "parse" do
     it "raises an exception if the namespace/format is unknown" do
       expect{

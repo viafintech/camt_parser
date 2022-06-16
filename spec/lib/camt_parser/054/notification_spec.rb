@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe CamtParser::Format054::Notification do
+RSpec.describe CamtParser::Format054::Notification do
   let(:camt)          { CamtParser::File.parse('spec/fixtures/054/valid_example.xml') }
   let(:notifications) { camt.notifications }
   let(:ex_ntfcn)      { camt.notifications[0] }

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe CamtParser::Format053::Base do
+RSpec.describe CamtParser::Format053::Base do
 
   context 'version 2' do
     context 'initialization' do

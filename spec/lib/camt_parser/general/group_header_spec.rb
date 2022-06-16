@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe CamtParser::GroupHeader do
+RSpec.describe CamtParser::GroupHeader do
   let(:camt) { CamtParser::File.parse 'spec/fixtures/053/valid_example.xml' }
   let(:group_header) { camt.group_header }
 
@@ -11,7 +11,7 @@ describe CamtParser::GroupHeader do
   specify { expect(group_header.additional_information).to eq("") }
 end
 
-describe CamtParser::MessagePagination do
+RSpec.describe CamtParser::MessagePagination do
   let(:camt) { CamtParser::File.parse 'spec/fixtures/053/valid_example.xml' }
   let(:message_pagination) { camt.group_header.message_pagination }
 

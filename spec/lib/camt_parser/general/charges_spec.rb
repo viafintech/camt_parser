@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe CamtParser::Charges do
+RSpec.describe CamtParser::Charges do
   let(:camt)       { CamtParser::File.parse('spec/fixtures/053/valid_example_v4.xml') }
   let(:entries)  { camt.statements.first.entries }
   let(:ex_charges) { entries[6].charges }
