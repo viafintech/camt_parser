@@ -27,7 +27,9 @@ camt.statements.each do |statement|
   statement.entries.each do |entry|
     # Access individual entries/bank transfers
     puts entry.amount
-    puts entry.debitor.iban
+    entry.transactions.each do |transaction|
+      puts transaction.debitor
+    end
   end
 end
 ```
