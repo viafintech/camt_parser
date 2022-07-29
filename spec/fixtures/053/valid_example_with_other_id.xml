@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:camt.053.001.02" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:camt.053.001.02 camt.053.001.02.xsd">
+
+<BkToCstmrStmt>
+  <GrpHdr>
+    <MsgId>053D2013-12-27T22:05:03.0N130000005</MsgId>
+    <CreDtTm>2013-12-27T22:04:52.0+01:00</CreDtTm>
+    <MsgPgntn>
+      <PgNb>1</PgNb>
+      <LastPgInd>true</LastPgInd>
+    </MsgPgntn>
+  </GrpHdr>
+  <Stmt>
+    <Id>0352C5320131227220503</Id>
+    <ElctrncSeqNb>130000005</ElctrncSeqNb>
+    <CreDtTm>2013-12-27T22:04:52.0+01:00</CreDtTm>
+    <Acct>
+      <Id>
+        <Othr>
+          <Id>ABCDE1234</Id>
+        </Othr>
+      </Id>
+      <Ccy>EUR</Ccy>
+      <Ownr>
+        <Nm>Testkonto Nummer 1</Nm>
+      </Ownr>
+      <Svcr>
+        <FinInstnId>
+          <BIC>GENODEF1PFK</BIC>
+          <Nm>VR-Bank Rottal-Inn eG</Nm>
+          <Othr>
+            <Id>DE 129267947</Id>
+            <Issr>UmsStId</Issr>
+          </Othr>
+        </FinInstnId>
+      </Svcr>
+    </Acct>
+  </Stmt>
+</BkToCstmrStmt>
+</Document>
