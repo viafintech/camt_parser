@@ -1,8 +1,10 @@
 module CamtParser
   module Errors
-    class NamespaceAlreadyRegistered < StandardError; end
-    class NotXMLError < StandardError; end
-    class UnsupportedParserClass < StandardError; end
-    class UnsupportedNamespaceError < StandardError; end
+    class BaseError < StandardError; end
+
+    class NamespaceAlreadyRegistered < BaseError; end
+    class NotXMLError < BaseError; end
+    class UnsupportedParserClass < BaseError; end
+    class UnsupportedNamespaceError < BaseError; end
   end
 end
