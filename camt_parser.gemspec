@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["tobias.schoknecht@viafintech.com"]
   spec.description   = %q{A parser for the Camt file format}
   spec.summary       = %q{Gem for parsing camt files into a speaking object.}
-  spec.homepage      = "https://github.com/Barzahlen/camt_parser"
+  spec.homepage      = "https://github.com/viafintech/camt_parser"
   spec.license       = "MIT"
 
   spec.files         = Dir['lib/**/*.rb', 'lib/**/*.rake'] # Important!
