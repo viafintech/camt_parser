@@ -13,7 +13,7 @@ module CamtParser
       def to_amount(value)
         return nil if value == nil || value.strip == ''
 
-        BigDecimal(value.gsub(',', '.'))
+        BigDecimal(value.tr(',', '.'))
       end
     end
   end
