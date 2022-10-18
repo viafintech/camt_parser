@@ -32,6 +32,10 @@ module CamtParser
       CamtParser::Misc.to_amount_in_cents(@amount)
     end
 
+    def signed_amount
+      amount * sign
+    end
+
     def to_h
       {
         'amount' => amount,
