@@ -14,7 +14,7 @@ GEM
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     racc (1.6.1)
-    rake (13.0.1)
+    rake (13.0.6)
     rspec (3.3.0)
       rspec-core (~> 3.3.0)
       rspec-expectations (~> 3.3.0)
@@ -35,8 +35,8 @@ PLATFORMS
 DEPENDENCIES
   builder (~> 3.2.2)
   camt_parser!
-  rake (~> 13.0.1)
+  rake (~> 13.0.6)
   rspec (~> 3.3.0)
 
 BUNDLED WITH
-   1.17.3
+   2.4.2
