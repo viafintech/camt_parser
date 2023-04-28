@@ -1,6 +1,9 @@
 module CamtParser
   class Misc
     class << self
+
+      # @param value [nil, String]
+      # @return [Integer, nil]
       def to_amount_in_cents(value)
         return nil if value == nil || value.strip == ''
 
@@ -10,6 +13,8 @@ module CamtParser
         format('%s%s', dollars, cents.ljust(2, '0')).to_i
       end
 
+      # @param value [nil, String]
+      # @return [BigDecimal, nil]
       def to_amount(value)
         return nil if value == nil || value.strip == ''
 
