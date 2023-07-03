@@ -5,7 +5,13 @@ module CamtParser
     end
 
     def name
-      @name ||= @xml_data.xpath('RltdPties/Dbtr/Nm/text()').text
+      @name ||= @xml_data.xpath('RltdPties/Dbtr/Nm/text()').text.then do |name|
+        if name.empty?
+          @xml_data.xpath('RltdPties/Dbtr/Pty/Nm/text()').text
+        else
+          name
+        end
+      end
     end
 
     def iban

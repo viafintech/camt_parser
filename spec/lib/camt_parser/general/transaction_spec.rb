@@ -79,6 +79,38 @@ RSpec.describe CamtParser::Transaction do
       specify { expect(ex_transaction.reason_code).to eq("MD06") }
     end
 
+    specify { expect(ex_transaction.name).to eq("Hans Kaufmann") }
     specify { expect(ex_transaction.creditor_reference).to eq("CreditorReference") }
+  end
+
+  context 'version 8' do
+    let(:camt)       { CamtParser::File.parse('spec/fixtures/053/valid_example_v8.xml') }
+    let(:statements) { camt.statements }
+    let(:ex_stmt)    { statements[0] }
+    let(:entries)  { ex_stmt.entries }
+    let(:ex_entry) { entries[1] }
+    let(:transactions)   { ex_entry.transactions }
+    let(:ex_transaction) { transactions[0] }
+
+    context '#amount' do
+      specify { expect(ex_transaction.amount).to be_kind_of(BigDecimal) }
+      specify { expect(ex_transaction.amount).to eq(BigDecimal('88.85')) }
+      specify { expect(ex_transaction.amount_in_cents).to eq(8885) }
+    end
+
+
+    specify { expect(ex_transaction.name).to eq("Finanz AG") }
+    specify { expect(ex_transaction.creditor_reference).to eq("RF38000000000000000000552") }
+    specify { expect(ex_transaction.swift_code).to eq("A90") }
+    specify { expect(ex_transaction.bank_reference).to eq("0123171DO5126811") }
+    specify { expect(ex_transaction.end_to_end_reference).to eq("435A9287E088BDB1D97FAABD181C70C8") }
+
+    context "#remittance_information" do
+      let(:ex_entry) { entries[0] }
+      let(:transactions)   { ex_entry.transactions }
+      let(:ex_transaction) { transactions[0] }
+
+    specify { expect(ex_transaction.remittance_information).to eq("INVOICE R77561") }
+    end
   end
 end
