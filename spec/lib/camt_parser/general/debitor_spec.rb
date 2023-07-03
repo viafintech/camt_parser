@@ -18,6 +18,8 @@ RSpec.describe CamtParser::Debitor do
 
   context "version 8" do
     let(:camt)           { CamtParser::File.parse('spec/fixtures/053/valid_example_v8.xml') }
+
     specify { expect(debitor.name).to eq("Jon Doe") }
+    specify { expect(debitor.bic).to eq("UBSWCHZH80A") }
   end
 end

@@ -20,5 +20,6 @@ RSpec.describe CamtParser::Creditor do
     let(:ex_entry)       { entries[2] }
 
     specify { expect(creditor.name).to eq("DHL Express (Schweiz) AG") }
+    specify { expect(creditor.bic).to eq("UBSWCHZH80A") }
   end
 end
