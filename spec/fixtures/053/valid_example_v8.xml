@@ -151,6 +151,13 @@
                 </Pty>
               </Dbtr>
             </RltdPties>
+            <RltdAgts>
+              <DbtrAgt>
+                <FinInstnId>
+                  <BICFI>UBSWCHZH80A</BICFI>
+                </FinInstnId>
+              </DbtrAgt>
+            </RltdAgts>
             <RmtInf>
               <Ustrd>INVOICE R77561</Ustrd>
             </RmtInf>
