@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:camt.053.001.08"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <BkToCstmrStmt>
+    <GrpHdr>
+      <MsgId>R39B4SA289HMZ6XA</MsgId>
+      <CreDtTm>2023-06-20T18:43:23+02:00</CreDtTm>
+      <MsgRcpt>
+        <Id>
+          <OrgId>
+            <AnyBIC>UBSWCHZHREB</AnyBIC>
+          </OrgId>
+        </Id>
+      </MsgRcpt>
+      <MsgPgntn>
+        <PgNb>1</PgNb>
+        <LastPgInd>true</LastPgInd>
+      </MsgPgntn>
+      <AddtlInf>SPS/2.0</AddtlInf>
+    </GrpHdr>
+    <Stmt>
+      <Id>R30B4SA880HMZ9XA</Id>
+      <ElctrncSeqNb>122</ElctrncSeqNb>
+      <CreDtTm>2023-06-20T18:43:23+02:00</CreDtTm>
+      <FrToDt>
+        <FrDtTm>2023-06-20T00:00:00+02:00</FrDtTm>
+        <ToDtTm>2023-06-20T23:59:59+02:00</ToDtTm>
+      </FrToDt>
+      <Acct>
+        <Id>
+          <IBAN>CH1111111111111111111</IBAN>
+        </Id>
+        <Ccy>CHF</Ccy>
+        <Ownr>
+          <Nm>ACME GmbH</Nm>
+        </Ownr>
+        <Svcr>
+          <FinInstnId>
+            <BICFI>UBSWCHZH80A</BICFI>
+            <Nm>UBS Switzerland AG</Nm>
+            <Othr>
+              <Id>CHE-116.303.292 MWST</Id>
+              <Issr>VAT-ID</Issr>
+            </Othr>
+          </FinInstnId>
+        </Svcr>
+      </Acct>
+      <Bal>
+        <Tp>
+          <CdOrPrtry>
+            <Cd>OPBD</Cd>
+          </CdOrPrtry>
+        </Tp>
+        <Amt Ccy="CHF">82721.95</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt>
+          <Dt>2023-06-20</Dt>
+        </Dt>
+      </Bal>
+      <Bal>
+        <Tp>
+          <CdOrPrtry>
+            <Cd>CLBD</Cd>
+          </CdOrPrtry>
+        </Tp>
+        <Amt Ccy="CHF">84515.25</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt>
+          <Dt>2023-06-20</Dt>
+        </Dt>
+      </Bal>
+      <Bal>
+        <Tp>
+          <CdOrPrtry>
+            <Cd>CLAV</Cd>
+          </CdOrPrtry>
+        </Tp>
+        <Amt Ccy="CHF">83415.25</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt>
+          <Dt>2023-06-20</Dt>
+        </Dt>
+      </Bal>
+      <Ntry>
+        <Amt Ccy="CHF">474.4</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts>
+          <Cd>BOOK</Cd>
+        </Sts>
+        <BookgDt>
+          <Dt>2023-06-20</Dt>
+        </BookgDt>
+        <ValDt>
+          <Dt>2023-06-20</Dt>
+        </ValDt>
+        <AcctSvcrRef>9999171ZC0173078</AcctSvcrRef>
+        <BkTxCd>
+          <Domn>
+            <Cd>PMNT</Cd>
+            <Fmly>
+              <Cd>RCDT</Cd>
+              <SubFmlyCd>AUTT</SubFmlyCd>
+            </Fmly>
+          </Domn>
+          <Prtry>
+            <Cd>Z04</Cd>
+          </Prtry>
+        </BkTxCd>
+        <AmtDtls>
+          <InstdAmt>
+            <Amt Ccy="CHF">474.4</Amt>
+          </InstdAmt>
+        </AmtDtls>
+        <NtryDtls>
+          <TxDtls>
+            <Refs>
+              <AcctSvcrRef>9999181ZC0283079</AcctSvcrRef>
+              <EndToEndId>80000004540000100095</EndToEndId>
+              <UETR>d0826d0f-a005-5e3b-b3dc-54da4ac7f0d0</UETR>
+            </Refs>
+            <Amt Ccy="CHF">474.4</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <AmtDtls>
+              <InstdAmt>
+                <Amt Ccy="CHF">474.4</Amt>
+              </InstdAmt>
+              <TxAmt>
+                <Amt Ccy="CHF">474.4</Amt>
+              </TxAmt>
+            </AmtDtls>
+            <BkTxCd>
+              <Domn>
+                <Cd>PMNT</Cd>
+                <Fmly>
+                  <Cd>RCDT</Cd>
+                  <SubFmlyCd>AUTT</SubFmlyCd>
+                </Fmly>
+              </Domn>
+              <Prtry>
+                <Cd>Z04</Cd>
+              </Prtry>
+            </BkTxCd>
+            <RltdPties>
+              <Dbtr>
+                <Pty>
+                  <Nm>Jon Doe</Nm>
+                  <PstlAdr>
+                    <AdrLine>Hofstrasse 2</AdrLine>
+                    <AdrLine>CH-8000 Zürich</AdrLine>
+                  </PstlAdr>
+                </Pty>
+              </Dbtr>
+            </RltdPties>
+            <RmtInf>
+              <Ustrd>INVOICE R77561</Ustrd>
+            </RmtInf>
+            <AddtlTxInf>Payment</AddtlTxInf>
+          </TxDtls>
+        </NtryDtls>
+        <AddtlNtryInf>Payment</AddtlNtryInf>
+      </Ntry>
+      <Ntry>
+        <NtryRef>CH700033323323241701E</NtryRef>
+        <Amt Ccy="CHF">88.85</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts>
+          <Cd>BOOK</Cd>
+        </Sts>
+        <BookgDt>
+          <Dt>2023-06-20</Dt>
+        </BookgDt>
+        <ValDt>
+          <Dt>2023-06-20</Dt>
+        </ValDt>
+        <AcctSvcrRef>2022172PH0003127</AcctSvcrRef>
+        <BkTxCd>
+          <Domn>
+            <Cd>PMNT</Cd>
+            <Fmly>
+              <Cd>RCDT</Cd>
+              <SubFmlyCd>VCOM</SubFmlyCd>
+            </Fmly>
+          </Domn>
+          <Prtry>
+            <Cd>A90</Cd>
+          </Prtry>
+        </BkTxCd>
+        <NtryDtls>
+          <Btch>
+            <MsgId>1b30f9941c8e459f9b0a7b11137b3720</MsgId>
+            <PmtInfId>8d8075ce49134553a261033714278400</PmtInfId>
+            <NbOfTxs>1</NbOfTxs>
+            <TtlAmt Ccy="CHF">88.85</TtlAmt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+          </Btch>
+          <TxDtls>
+            <Refs>
+              <AcctSvcrRef>0123171DO5126811</AcctSvcrRef>
+              <EndToEndId>435A9287E088BDB1D97FAABD181C70C8</EndToEndId>
+            </Refs>
+            <Amt Ccy="CHF">88.85</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <AmtDtls>
+              <InstdAmt>
+                <Amt Ccy="CHF">88.85</Amt>
+              </InstdAmt>
+              <TxAmt>
+                <Amt Ccy="CHF">88.85</Amt>
+              </TxAmt>
+            </AmtDtls>
+            <BkTxCd>
+              <Domn>
+                <Cd>PMNT</Cd>
+                <Fmly>
+                  <Cd>RCDT</Cd>
+                  <SubFmlyCd>VCOM</SubFmlyCd>
+                </Fmly>
+              </Domn>
+              <Prtry>
+                <Cd>A90</Cd>
+              </Prtry>
+            </BkTxCd>
+            <RltdPties>
+              <InitgPty>
+                <Pty>
+                  <Nm>Finanz AG</Nm>
+                </Pty>
+              </InitgPty>
+              <Dbtr>
+                <Pty>
+                  <Nm>Finanz AG</Nm>
+                </Pty>
+              </Dbtr>
+            </RltdPties>
+            <RmtInf>
+              <Strd>
+                <CdtrRefInf>
+                  <Tp>
+                    <CdOrPrtry>
+                      <Cd>SCOR</Cd>
+                    </CdOrPrtry>
+                  </Tp>
+                  <Ref>RF38000000000000000000552</Ref>
+                </CdtrRefInf>
+              </Strd>
+            </RmtInf>
+            <AddtlTxInf>Credit Creditor Reference</AddtlTxInf>
+          </TxDtls>
+        </NtryDtls>
+        <AddtlNtryInf>Credit Creditor Reference</AddtlNtryInf>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="CHF">19.69</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts>
+          <Cd>BOOK</Cd>
+        </Sts>
+        <BookgDt>
+          <Dt>2023-06-20</Dt>
+        </BookgDt>
+        <ValDt>
+          <Dt>2023-06-20</Dt>
+        </ValDt>
+        <AcctSvcrRef>0124571DN6195349</AcctSvcrRef>
+        <BkTxCd>
+          <Domn>
+            <Cd>PMNT</Cd>
+            <Fmly>
+              <Cd>ICDT</Cd>
+              <SubFmlyCd>AUTT</SubFmlyCd>
+            </Fmly>
+          </Domn>
+          <Prtry>
+            <Cd>Z44</Cd>
+          </Prtry>
+        </BkTxCd>
+        <AmtDtls>
+          <InstdAmt>
+            <Amt Ccy="CHF">19.69</Amt>
+          </InstdAmt>
+          <TxAmt>
+            <Amt Ccy="CHF">19.69</Amt>
+          </TxAmt>
+        </AmtDtls>
+        <NtryDtls>
+          <TxDtls>
+            <Refs>
+              <MsgId>01222ABC</MsgId>
+              <AcctSvcrRef>0123171DN6095310</AcctSvcrRef>
+              <PmtInfId>01222ABC-HAF</PmtInfId>
+              <InstrId>373502949-1208481</InstrId>
+              <EndToEndId>1208481</EndToEndId>
+            </Refs>
+            <Amt Ccy="CHF">19.69</Amt>
+            <CdtDbtInd>DBIT</CdtDbtInd>
+            <AmtDtls>
+              <InstdAmt>
+                <Amt Ccy="CHF">19.69</Amt>
+              </InstdAmt>
+              <TxAmt>
+                <Amt Ccy="CHF">19.69</Amt>
+              </TxAmt>
+            </AmtDtls>
+            <BkTxCd>
+              <Domn>
+                <Cd>PMNT</Cd>
+                <Fmly>
+                  <Cd>ICDT</Cd>
+                  <SubFmlyCd>AUTT</SubFmlyCd>
+                </Fmly>
+              </Domn>
+              <Prtry>
+                <Cd>Z44</Cd>
+              </Prtry>
+            </BkTxCd>
+            <RltdPties>
+              <InitgPty>
+                <Pty>
+                  <Nm>ACME GmbH</Nm>
+                </Pty>
+              </InitgPty>
+              <Cdtr>
+                <Pty>
+                  <Nm>DHL Express (Schweiz) AG</Nm>
+                  <PstlAdr>
+                    <Ctry>CH</Ctry>
+                    <AdrLine>Hochstrasse 5</AdrLine>
+                    <AdrLine>4052 Basel</AdrLine>
+                  </PstlAdr>
+                </Pty>
+              </Cdtr>
+              <CdtrAcct>
+                <Id>
+                  <IBAN>CH2222222222222222222</IBAN>
+                </Id>
+              </CdtrAcct>
+            </RltdPties>
+            <RltdAgts>
+              <DbtrAgt>
+                <FinInstnId>
+                  <BICFI>UBSWCHZH80A</BICFI>
+                </FinInstnId>
+              </DbtrAgt>
+            </RltdAgts>
+            <RmtInf>
+              <Strd>
+                <CdtrRefInf>
+                  <Tp>
+                    <CdOrPrtry>
+                      <Prtry>QRR</Prtry>
+                    </CdOrPrtry>
+                  </Tp>
+                  <Ref>000000270148751802165444888</Ref>
+                </CdtrRefInf>
+              </Strd>
+            </RmtInf>
+            <AddtlTxInf>e-banking Order // FILETRANSFER</AddtlTxInf>
+          </TxDtls>
+        </NtryDtls>
+        <AddtlNtryInf>e-banking Order // FILETRANSFER</AddtlNtryInf>
+      </Ntry>
+
+    </Stmt>
+  </BkToCstmrStmt>
+</Document>

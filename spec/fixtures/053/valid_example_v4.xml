@@ -331,6 +331,11 @@
                 </Tp>
               </Rcrd>
             </Chrgs>
+            <RltdPties>
+              <Dbtr>
+                <Nm>Hans Kaufmann</Nm>
+              </Dbtr>
+            </RltdPties>
             <RltdAgts>
               <DbtrAgt>
                 <FinInstnId>

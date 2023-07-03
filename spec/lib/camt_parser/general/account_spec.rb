@@ -18,4 +18,14 @@ RSpec.describe CamtParser::Account do
     specify { expect(account.other_id).to eq("ABCDE1234") }
     specify { expect(account.account_number).to eq("ABCDE1234") }
   end
+
+  context "version 8" do
+    let(:camt) { CamtParser::File.parse('spec/fixtures/053/valid_example_v8.xml') }
+
+    specify { expect(account.iban).to eq("CH1111111111111111111") }
+    specify { expect(account.account_number).to eq("CH1111111111111111111") }
+    specify { expect(account.bic).to eq("UBSWCHZH80A") }
+    specify { expect(account.bank_name).to eq("UBS Switzerland AG") }
+    specify { expect(account.currency).to eq("CHF") }
+  end
 end
