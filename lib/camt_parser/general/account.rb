@@ -17,13 +17,10 @@ module CamtParser
     end
 
     def bic
-      @bic ||= @xml_data.xpath('Svcr/FinInstnId/BIC/text()').text.then do |bic|
-        if bic.empty?
-          @xml_data.xpath('Svcr/FinInstnId/BICFI/text()').text
-        else
-          bic
-        end
-      end
+      @bic ||= [
+        @xml_data.xpath('Svcr/FinInstnId/BIC/text()').text,
+        @xml_data.xpath('Svcr/FinInstnId/BICFI/text()').text,
+      ].reject(&:empty?).first.to_s
     end
 
     def bank_name

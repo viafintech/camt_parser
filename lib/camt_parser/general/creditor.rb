@@ -5,13 +5,10 @@ module CamtParser
     end
 
     def name
-      @name ||= @xml_data.xpath('RltdPties/Cdtr/Nm/text()').text.then do |name|
-        if name.empty?
-          @xml_data.xpath('RltdPties/Cdtr/Pty/Nm/text()').text
-        else
-          name
-        end
-      end
+      @name ||= [
+        @xml_data.xpath('RltdPties/Cdtr/Nm/text()').text,
+        @xml_data.xpath('RltdPties/Cdtr/Pty/Nm/text()').text,
+      ].reject(&:empty?).first.to_s
     end
 
     def iban
@@ -19,13 +16,10 @@ module CamtParser
     end
 
     def bic
-      @bic ||= @xml_data.xpath('RltdAgts/CdtrAgt/FinInstnId/BIC/text()').text.then do |bic|
-        if bic.empty?
-          @xml_data.xpath('RltdAgts/DbtrAgt/FinInstnId/BICFI/text()').text
-        else
-          bic
-        end
-      end
+      @bic ||= [
+        @xml_data.xpath('RltdAgts/CdtrAgt/FinInstnId/BIC/text()').text,
+        @xml_data.xpath('RltdAgts/DbtrAgt/FinInstnId/BICFI/text()').text,
+      ].reject(&:empty?).first.to_s
     end
 
     def bank_name
