@@ -18,7 +18,7 @@ module CamtParser
     def bic
       @bic ||= [
         @xml_data.xpath('RltdAgts/CdtrAgt/FinInstnId/BIC/text()').text,
-        @xml_data.xpath('RltdAgts/DbtrAgt/FinInstnId/BICFI/text()').text,
+        @xml_data.xpath('RltdAgts/CdtrAgt/FinInstnId/BICFI/text()').text,
       ].reject(&:empty?).first.to_s
     end
 
