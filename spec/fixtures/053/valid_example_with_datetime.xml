@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:iso:std:iso:20022:tech:xsd:camt.053.001.10">
+    <BkToCstmrStmt>
+        <GrpHdr>
+            <MsgId>1234567-1234567891000</MsgId>
+            <CreDtTm>2023-07-06T10:27:07.213294607Z</CreDtTm>
+        </GrpHdr>
+        <Stmt>
+            <Id>7301750-38631543-1688639227213</Id>
+            <CreDtTm>2023-07-06T10:27:07.213294607Z</CreDtTm>
+            <FrToDt>
+                <FrDtTm>2022-07-07T00:00:00+02:00</FrDtTm>
+                <ToDtTm>2023-07-07T00:00:00+02:00</ToDtTm>
+            </FrToDt>
+            <Acct>
+                <Id>
+                    <Othr>
+                        <Id>11111111</Id>
+                        <SchmeNm>
+                            <Prtry>Wise Account ID</Prtry>
+                        </SchmeNm>
+                        <Issr>Wise Payments Ltd.</Issr>
+                    </Othr>
+                </Id>
+                <Ccy>USD</Ccy>
+                <Ownr>
+                    <Nm>Max Muster</Nm>
+                    <PstlAdr>
+                        <AdrTp>
+                            <Cd>ADDR</Cd>
+                        </AdrTp>
+                            <PstCd>4410</PstCd>
+                        <TwnNm>Liestal</TwnNm>
+                        <AdrLine>Beispielstrasse 10</AdrLine>
+                    </PstlAdr>
+                    <Id>
+                        <PrvtId>
+                            <Othr>
+                                <Id>1111111</Id>
+                                <SchmeNm>
+                                    <Cd>CUST</Cd>
+                                </SchmeNm>
+                            </Othr>
+                        </PrvtId>
+                    </Id>
+                </Ownr>
+                <Svcr>
+                    <FinInstnId>
+                        <Nm>Wise Payments Ltd.</Nm>
+                        <PstlAdr>
+                            <AdrTp>
+                                <Cd>ADDR</Cd>
+                            </AdrTp>
+                            <PstCd>E1 6JJ</PstCd>
+                            <TwnNm>London</TwnNm>
+                            <AdrLine>6th Floor, The Tea Building, 56 Shoreditch High Street</AdrLine>
+                        </PstlAdr>
+                    </FinInstnId>
+                </Svcr>
+            </Acct>
+            <Bal>
+                <Tp>
+                    <CdOrPrtry>
+                        <Cd>CLBD</Cd>
+                    </CdOrPrtry>
+                </Tp>
+                <Amt Ccy="USD">606.80</Amt>
+                <CdtDbtInd>CRDT</CdtDbtInd>
+                <Dt>
+                    <DtTm>2023-07-07T00:00:00+02:00</DtTm>
+                </Dt>
+            </Bal>
+            <TxsSummry>
+                <TtlNtries>
+                    <NbOfNtries>14</NbOfNtries>
+                    <Sum>606.80</Sum>
+                    <TtlNetNtry>
+                        <Amt>606.80</Amt>
+                        <CdtDbtInd>CRDT</CdtDbtInd>
+                    </TtlNetNtry>
+                </TtlNtries>
+                <TtlCdtNtries>
+                    <NbOfNtries>4</NbOfNtries>
+                    <Sum>1115.92</Sum>
+                </TtlCdtNtries>
+                <TtlDbtNtries>
+                    <NbOfNtries>10</NbOfNtries>
+                    <Sum>-509.12</Sum>
+                </TtlDbtNtries>
+            </TxsSummry>
+            <Ntry>
+                <NtryRef>Test Buchung</NtryRef>
+                <Amt Ccy="USD">195.86</Amt>
+                <CdtDbtInd>CRDT</CdtDbtInd>
+                <Sts>
+                    <Cd>BOOK</Cd>
+                </Sts>
+                <BookgDt>
+                    <DtTm>2023-06-21T12:35:33.115965+00:00</DtTm>
+                </BookgDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>TRANSFER-123456789</Cd>
+                    </Prtry>
+                </BkTxCd>
+                <Chrgs>
+                    <TtlChrgsAndTaxAmt Ccy="USD">4.14</TtlChrgsAndTaxAmt>
+                </Chrgs>
+            </Ntry>
+        </Stmt>
+    </BkToCstmrStmt>
+</Document>
