@@ -28,12 +28,22 @@ module CamtParser
 
     # @return [Date]
     def value_date
-      @value_date ||= Date.parse(xml_data.xpath('ValDt/Dt/text()').text)
+      @value_date ||= ((date = xml_data.xpath('ValDt/Dt/text()').text).empty? ? nil : Date.parse(date))
     end
 
     # @return [Date]
     def booking_date
-      @booking_date ||= Date.parse(xml_data.xpath('BookgDt/Dt/text()').text)
+      @booking_date ||= ((date = xml_data.xpath('BookgDt/Dt/text()').text).empty? ? nil : Date.parse(date))
+    end
+
+    # @return [DateTime]
+    def value_datetime
+      @value_datetime ||= ((datetime = xml_data.xpath('ValDt/DtTm/text()').text).empty? ? nil : DateTime.parse(datetime))
+    end
+
+    # @return [DateTime]
+    def booking_datetime
+      @booking_datetime ||= ((datetime = xml_data.xpath('BookgDt/DtTm/text()').text).empty? ? nil : DateTime.parse(datetime))
     end
 
     # @return [String]
@@ -83,8 +93,8 @@ module CamtParser
     end
     # @return [CamtParser::BatchDetail, nil]
     def batch_detail
-      @batch_detail ||= xml_data.xpath('NtryDtls/Btch').empty? ? nil : CamtParser::BatchDetail.new(xml_data.xpath('NtryDtls/Btch'))
-    end  
+      @batch_detail ||= xml_data.xpath('NtryDtls/Btch').empty? ? nil : CamtParser::BatchDetail.new(@xml_data.xpath('NtryDtls/Btch'))
+    end
 
     private
 
@@ -101,6 +111,5 @@ module CamtParser
 
       xml_data.xpath('NtryDtls/TxDtls').map { |x| Transaction.new(x, debit?, amt, ccy) }
     end
-    
   end
 end

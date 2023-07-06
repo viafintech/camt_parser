@@ -29,4 +29,11 @@ RSpec.describe CamtParser::Entry do
   specify { expect(ex_entry.transactions).to all(be_kind_of(CamtParser::Transaction)) }
   specify { expect(ex_entry.bank_reference).to eq('2013122710583450000') }
   specify { expect(ex_entry.xml_data).to_not be_nil }
+
+  context 'datetime' do
+    let(:camt) { CamtParser::File.parse('spec/fixtures/053/valid_example_with_datetime.xml') }
+    specify { expect(ex_entry.booking_datetime).to be_kind_of(DateTime) }
+    specify { expect(ex_entry.booking_datetime).to eq(DateTime.new(2023, 06, 21, 12, 35, 33.115965)) }
+    specify { expect(ex_entry.value_datetime).to eq(nil) }
+  end
 end
