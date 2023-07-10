@@ -343,11 +343,11 @@
               </CdtrAcct>
             </RltdPties>
             <RltdAgts>
-              <DbtrAgt>
+              <CdtrAgt>
                 <FinInstnId>
                   <BICFI>UBSWCHZH80A</BICFI>
                 </FinInstnId>
-              </DbtrAgt>
+              </CdtrAgt>
             </RltdAgts>
             <RmtInf>
               <Strd>
