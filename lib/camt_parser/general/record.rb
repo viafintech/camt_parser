@@ -1,8 +1,11 @@
 module CamtParser
   class Record
+
+    attr_reader :xml_data
+
     def initialize(xml_data)
       @xml_data = xml_data
-      @amount = @xml_data.xpath('Amt/text()').text
+      @amount = xml_data.xpath('Amt/text()').text
     end
 
     def amount
@@ -14,19 +17,19 @@ module CamtParser
     end
 
     def currency
-      @currency ||= @xml_data.xpath('Amt/@Ccy').text
+      @currency ||= xml_data.xpath('Amt/@Ccy').text
     end
 
     def type
-      @type ||= CamtParser::Type::Builder.build_type(@xml_data.xpath('Tp'))
+      @type ||= CamtParser::Type::Builder.build_type(xml_data.xpath('Tp'))
     end
 
     def charges_included?
-      @charges_included ||= @xml_data.xpath('ChrgInclInd/text()').text.downcase == 'true'
+      @charges_included ||= xml_data.xpath('ChrgInclInd/text()').text.downcase == 'true'
     end
 
     def debit
-      @debit ||= @xml_data.xpath('CdtDbtInd/text()').text.upcase == 'DBIT'
+      @debit ||= xml_data.xpath('CdtDbtInd/text()').text.upcase == 'DBIT'
     end
 
     def credit?

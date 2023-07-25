@@ -7,4 +7,5 @@ RSpec.describe CamtParser::Charges do
 
   specify { expect(entries.map(&:charges)).to all(be_kind_of(described_class)) }
   specify { expect(ex_charges.total_charges_and_tax_amount).to eq(BigDecimal('5.2')) }
+  specify { expect(ex_charges.xml_data).to_not be_nil }
 end

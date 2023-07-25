@@ -11,6 +11,7 @@ RSpec.describe CamtParser::Account do
   specify { expect(account.bic).to eq("GENODEF1PFK") }
   specify { expect(account.bank_name).to eq("VR-Bank Rottal-Inn eG") }
   specify { expect(account.currency).to eq("EUR") }
+  specify { expect(account.xml_data).to_not be_nil }
 
   context 'with Other/Id as account_number' do
     let(:camt) { CamtParser::File.parse('spec/fixtures/053/valid_example_with_other_id.xml') }

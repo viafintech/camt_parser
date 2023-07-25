@@ -19,6 +19,8 @@ RSpec.describe CamtParser::Format053::Statement do
     specify { expect(ex_stmt.closing_balance).to be_kind_of(CamtParser::AccountBalance) }
 
     specify { expect(ex_stmt.identification).to eq("0352C5320131227220503") }
+
+    specify { expect(ex_stmt.xml_data).to_not be_nil }
   end
 
   context 'version 4' do
@@ -29,6 +31,8 @@ RSpec.describe CamtParser::Format053::Statement do
     let(:ex_ntry_chrgs) { ex_stmt.entries[0] }
 
     specify { expect(ex_ntry.charges).to be_kind_of(CamtParser::Charges)}
+
+    specify { expect(ex_stmt.xml_data).to_not be_nil }
   end
 
   context 'version 8' do
@@ -50,5 +54,7 @@ RSpec.describe CamtParser::Format053::Statement do
 
     specify { expect(ex_stmt.opening_balance).to be_kind_of(CamtParser::AccountBalance) }
     specify { expect(ex_stmt.closing_balance).to be_kind_of(CamtParser::AccountBalance) }
+
+    specify { expect(ex_stmt.xml_data).to_not be_nil }
   end
 end

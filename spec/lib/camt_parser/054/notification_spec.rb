@@ -12,4 +12,6 @@ RSpec.describe CamtParser::Format054::Notification do
   specify { expect(ex_ntfcn.to_date_time).to be_kind_of(Time) }
   specify { expect(ex_ntfcn.account).to be_kind_of(CamtParser::Account) }
   specify { expect(ex_ntfcn.entries).to be_kind_of(Array) }
+  specify { expect(ex_ntfcn.xml_data).to_not be_nil }
+
 end

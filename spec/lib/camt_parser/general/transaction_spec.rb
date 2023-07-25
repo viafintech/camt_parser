@@ -56,6 +56,7 @@ RSpec.describe CamtParser::Transaction do
     specify {
       expect(ex_transaction.additional_information).to eq("AdditionalTransactionInformation")
     }
+    specify { expect(ex_transaction.xml_data).to_not be_nil }
   end
 
   context 'version 4' do

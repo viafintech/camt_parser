@@ -28,4 +28,6 @@ RSpec.describe CamtParser::Format052::Report do
     specify { expect(ex_rpt.to_date_time).to be_kind_of(Time) }
     specify { expect(ex_rpt.to_date_time).to eq(Time.new(2019, 8, 9, 0, 0, 0)) }
   end
+
+  specify { expect(camt.xml_data).to_not be_nil }
 end

@@ -9,6 +9,7 @@ RSpec.describe CamtParser::GroupHeader do
   specify { expect(group_header.creation_date_time).to be_kind_of(Time) }
   specify { expect(group_header.message_pagination).to be_kind_of(CamtParser::MessagePagination) }
   specify { expect(group_header.additional_information).to eq("") }
+  specify { expect(group_header.xml_data).to_not be_nil }
 end
 
 RSpec.describe CamtParser::MessagePagination do
@@ -18,4 +19,5 @@ RSpec.describe CamtParser::MessagePagination do
   specify { expect(message_pagination).to be_kind_of(described_class) }
   specify { expect(message_pagination.page_number).to eq(1) }
   specify { expect(message_pagination.last_page?).to be_truthy }
+  specify { expect(message_pagination.xml_data).to_not be_nil }
 end

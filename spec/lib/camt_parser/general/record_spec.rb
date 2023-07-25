@@ -13,6 +13,7 @@ RSpec.describe CamtParser::Record do
   specify { expect(ex_charges.records[0].type.id).to eq('2') }
   specify { expect(ex_charges.records[0].credit?).to be(false) }
   specify { expect(ex_charges.records[0].charges_included?).to be(false) }
+  specify { expect(ex_charges.records[0].xml_data).to_not be_nil }
 
   specify { expect(ex_charges.records[1].amount_in_cents).to be(20) }
   specify { expect(ex_charges.records[1].amount).to eq(BigDecimal('0.20')) }
@@ -21,4 +22,5 @@ RSpec.describe CamtParser::Record do
   specify { expect(ex_charges.records[1].type.code).to eq('DISC') }
   specify { expect(ex_charges.records[1].credit?).to be(true) }
   specify { expect(ex_charges.records[1].charges_included?).to be(true) }
+  specify { expect(ex_charges.records[1].xml_data).to_not be_nil }
 end

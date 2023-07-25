@@ -14,6 +14,7 @@ RSpec.describe CamtParser::Creditor do
   specify { expect(creditor.iban).to eq("DE09300606010012345671") }
   specify { expect(creditor.bic).to eq("DAAEDEDDXXX") }
   specify { expect(creditor.bank_name).to eq("Bank") }
+  specify { expect(creditor.xml_data).to_not be_nil }
 
   context "version 8" do
     let(:camt)           { CamtParser::File.parse('spec/fixtures/053/valid_example_v8.xml') }

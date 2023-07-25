@@ -1,9 +1,11 @@
 module CamtParser
   module Format053
     class Base
-      attr_reader :group_header, :statements
+      attr_reader :group_header, :statements, :xml_data
 
       def initialize(xml_data)
+        @xml_data = xml_data
+
         grphdr = xml_data.xpath('BkToCstmrStmt/GrpHdr')
         @group_header = GroupHeader.new(grphdr)
         statements = xml_data.xpath('BkToCstmrStmt/Stmt')

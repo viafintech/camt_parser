@@ -15,6 +15,7 @@ RSpec.describe CamtParser::Format053::Base do
     let(:camt) { CamtParser::File.parse 'spec/fixtures/053/valid_example.xml' }
     specify { expect(camt.group_header).to_not be_nil }
     specify { expect(camt.statements).to_not eq([]) }
+    specify { expect(camt.xml_data).to_not be_nil }
   end
 
   context 'version 4' do
@@ -30,5 +31,6 @@ RSpec.describe CamtParser::Format053::Base do
     let(:camt) { CamtParser::File.parse 'spec/fixtures/053/valid_example_v4.xml' }
     specify { expect(camt.group_header).to_not be_nil }
     specify { expect(camt.statements).to_not eq([]) }
+    specify { expect(camt.xml_data).to_not be_nil }
   end
 end
