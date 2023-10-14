@@ -42,6 +42,10 @@ module CamtParser
       credit? ? debitor.bic : creditor.bic
     end
 
+    def postal_address
+      credit? ? debitor.postal_address : creditor.postal_address
+    end
+
     def credit?
       !debit
     end
