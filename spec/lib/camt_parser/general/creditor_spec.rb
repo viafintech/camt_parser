@@ -17,10 +17,17 @@ RSpec.describe CamtParser::Creditor do
   specify { expect(creditor.xml_data).to_not be_nil }
 
   context "version 8" do
-    let(:camt)           { CamtParser::File.parse('spec/fixtures/053/valid_example_v8.xml') }
-    let(:ex_entry)       { entries[2] }
+    let(:camt)     { CamtParser::File.parse('spec/fixtures/053/valid_example_v8.xml') }
+    let(:ex_entry) { entries[2] }
 
     specify { expect(creditor.name).to eq("DHL Express (Schweiz) AG") }
     specify { expect(creditor.bic).to eq("UBSWCHZH80A") }
+  end
+
+  context "with address" do
+    let(:camt) { CamtParser::File.parse('spec/fixtures/053/valid_example_with_debit.xml') }
+
+    specify { expect(creditor.name).to eq("Testkonto Nummer 2") }
+    specify { expect(creditor.postal_address.lines).to eq(["Berlin", "Infinite Loop 2", "12345"]) }
   end
 end

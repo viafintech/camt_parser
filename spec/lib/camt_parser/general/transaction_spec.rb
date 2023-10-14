@@ -41,6 +41,7 @@ RSpec.describe CamtParser::Transaction do
 
     specify { expect(ex_transaction.creditor).to be_kind_of(CamtParser::Creditor) }
     specify { expect(ex_transaction.debitor).to be_kind_of(CamtParser::Debitor) }
+    specify { expect(ex_transaction.postal_address).to be_kind_of(CamtParser::PostalAddress) }
     specify { expect(ex_transaction.remittance_information)
       .to eq("TEST BERWEISUNG MITTELS BLZUND KONTONUMMER - DTA") }
     specify { expect(ex_transaction.iban).to eq("DE09300606010012345671") }

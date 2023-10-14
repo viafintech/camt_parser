@@ -28,5 +28,17 @@ module CamtParser
     def bank_name
       @bank_name ||= xml_data.xpath('RltdAgts/CdtrAgt/FinInstnId/Nm/text()').text
     end
+
+    # @return [CamtParser::PostalAddress, nil]
+    def postal_address # May be missing
+      postal_address = [
+        xml_data.xpath('RltdPties/Cdtr/PstlAdr'),
+        xml_data.xpath('RltdPties/Cdtr/Pty/PstlAdr'),
+      ].reject(&:empty?).first
+
+      return nil if postal_address == nil || postal_address.empty?
+
+      @address ||= CamtParser::PostalAddress.new(postal_address)
+    end
   end
 end
