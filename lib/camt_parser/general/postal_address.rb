@@ -7,14 +7,6 @@ module CamtParser
       @xml_data = xml_data
     end
 
-    # @return [Boolean]
-    def structured?
-      street_name != "" ||
-        building_number != "" ||
-        postal_code != "" ||
-        town_name != ""
-    end
-
     # @return [Array<String>]
     def lines # May be empty
       xml_data.xpath('AdrLine').map do |x|

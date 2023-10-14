@@ -11,7 +11,6 @@ RSpec.describe CamtParser::PostalAddress do
   let(:address)        { ex_transaction.postal_address }
 
   specify { expect(address.lines).to eq(["Berlin", "Infinite Loop 2", "12345"]) }
-  specify { expect(address.structured?).to eq(false) }
   specify { expect(address.xml_data).to_not be_nil }
 
   context "version 8" do
@@ -20,7 +19,6 @@ RSpec.describe CamtParser::PostalAddress do
 
     specify { expect(address.lines).to eq(["Hochstrasse 5", "4052 Basel"]) }
     specify { expect(address.country).to eq("CH") }
-    specify { expect(address.structured?).to eq(false) }
     specify { expect(address.street_name).to eq("") }
   end
 
@@ -32,7 +30,6 @@ RSpec.describe CamtParser::PostalAddress do
     let(:address)        { entity.postal_address }
 
     specify { expect(entity.name).to eq("Rutschmann Pia") }
-    specify { expect(address.structured?).to eq(true) }
     specify { expect(address.street_name).to eq("Marktgasse") }
     specify { expect(address.building_number).to eq("28") }
     specify { expect(address.postal_code).to eq("9400") }
