@@ -96,6 +96,10 @@ module CamtParser
       @batch_detail ||= xml_data.xpath('NtryDtls/Btch').empty? ? nil : CamtParser::BatchDetail.new(@xml_data.xpath('NtryDtls/Btch'))
     end
 
+    def ntry_ref
+      @ntry_ref ||= xml_data.at_xpath('.//NtryRef').text
+    end
+
     private
 
     def parse_transactions
