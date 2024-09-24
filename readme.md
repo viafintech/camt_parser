@@ -7,6 +7,10 @@ structure for easier usability instead of having to use an XML parser all the ti
 Keep in mind that this might not include a complete parsing of camt specification.
 Fields that we did not need for our use-cases are simply ignored for now.
 
+**PLEASE CONSIDER SWITCHING TO [sepa_file_parser](https://github.com/viafintech/sepa_file_parser)**
+
+`sepa_file_parser` is the followup project with broader support for other SEPA/iso20022 related file formats.
+
 ## Getting started
 
 1. add the Gem to the Gemfile
