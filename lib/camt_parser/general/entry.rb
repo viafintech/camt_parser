@@ -51,6 +51,11 @@ module CamtParser
       @bank_reference ||= xml_data.xpath('AcctSvcrRef/text()').text
     end
 
+    # @return [String]
+    def reference # May be missing
+      @reference ||= xml_data.xpath('NtryRef/text()').text
+    end
+
     # @return [Array<CamtParser::Transaction>]
     def transactions
       @transactions ||= parse_transactions

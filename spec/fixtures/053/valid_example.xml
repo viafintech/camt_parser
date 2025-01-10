@@ -59,6 +59,7 @@
     </Bal>
     <Ntry>
       <Amt Ccy="EUR">2.00</Amt>
+      <NtryRef>1234567890sdfghjk</NtryRef>
       <CdtDbtInd>DBIT</CdtDbtInd>
       <Sts>BOOK</Sts>
       <BookgDt>

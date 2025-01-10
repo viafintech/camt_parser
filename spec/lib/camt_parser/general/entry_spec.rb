@@ -28,6 +28,7 @@ RSpec.describe CamtParser::Entry do
   specify { expect(ex_entry.sign).to eq(-1) }
   specify { expect(ex_entry.transactions).to all(be_kind_of(CamtParser::Transaction)) }
   specify { expect(ex_entry.bank_reference).to eq('2013122710583450000') }
+  specify { expect(ex_entry.reference).to eq('1234567890sdfghjk') }
   specify { expect(ex_entry.xml_data).to_not be_nil }
 
   context 'datetime' do
