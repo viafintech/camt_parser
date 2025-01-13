@@ -80,6 +80,18 @@ module CamtParser
       @reference ||= xml_data.xpath('Refs/InstrId/text()').text
     end
 
+    def original_currency_amount # May be missing
+      @original_currency_amount ||= CamtParser::Misc.to_amount(parse_original_currency_amount)
+    end
+
+    def original_currency # May be missing
+      @original_currency ||= xml_data.xpath('AmtDtls/InstdAmt/Amt/@Ccy').text
+    end
+
+    def exchange_rate # May be missing
+      @exchange_rate ||= xml_data.xpath('AmtDtls/TxAmt/CcyXchg/XchgRate/text()').text
+    end
+
     def bank_reference # May be missing
       @bank_reference ||= xml_data.xpath('Refs/AcctSvcrRef/text()').text
     end
@@ -117,6 +129,10 @@ module CamtParser
     end
 
     private
+
+    def parse_original_currency_amount
+      xml_data.xpath('AmtDtls/InstdAmt/Amt/text()').text
+    end
 
     def parse_amount
       if xml_data.xpath('Amt').any?

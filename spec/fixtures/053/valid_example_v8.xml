@@ -257,7 +257,7 @@
         <AddtlNtryInf>Credit Creditor Reference</AddtlNtryInf>
       </Ntry>
       <Ntry>
-        <Amt Ccy="CHF">19.69</Amt>
+        <Amt Ccy="EUR">20.97</Amt>
         <CdtDbtInd>DBIT</CdtDbtInd>
         <Sts>
           <Cd>BOOK</Cd>
@@ -286,7 +286,11 @@
             <Amt Ccy="CHF">19.69</Amt>
           </InstdAmt>
           <TxAmt>
-            <Amt Ccy="CHF">19.69</Amt>
+            <Amt Ccy="EUR">20.97</Amt>
+            <CcyXchg>
+              <SrcCcy>CHF</SrcCcy>
+              <XchgRate>0.9433</XchgRate>
+            </CcyXchg>
           </TxAmt>
         </AmtDtls>
         <NtryDtls>
@@ -298,14 +302,18 @@
               <InstrId>373502949-1208481</InstrId>
               <EndToEndId>1208481</EndToEndId>
             </Refs>
-            <Amt Ccy="CHF">19.69</Amt>
+            <Amt Ccy="EUR">20.97</Amt>
             <CdtDbtInd>DBIT</CdtDbtInd>
             <AmtDtls>
               <InstdAmt>
                 <Amt Ccy="CHF">19.69</Amt>
               </InstdAmt>
               <TxAmt>
-                <Amt Ccy="CHF">19.69</Amt>
+                <Amt Ccy="EUR">20.97</Amt>
+                <CcyXchg>
+                  <SrcCcy>CHF</SrcCcy>
+                  <XchgRate>0.9433</XchgRate>
+                </CcyXchg>
               </TxAmt>
             </AmtDtls>
             <BkTxCd>
