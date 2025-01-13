@@ -100,6 +100,26 @@ RSpec.describe CamtParser::Transaction do
       specify { expect(ex_transaction.amount_in_cents).to eq(8885) }
     end
 
+    context 'transaction with different currency' do
+      let(:ex_transaction) { transactions[0] }
+      let(:ex_entry) { entries[2] }
+
+      context '#amount' do
+        specify { expect(ex_transaction.amount).to be_kind_of(BigDecimal) }
+        specify { expect(ex_transaction.amount).to eq(BigDecimal('20.97')) }
+        specify { expect(ex_transaction.amount_in_cents).to eq(2097) }
+      end
+
+      context '#original_currency_amount' do
+        specify { expect(ex_transaction.original_currency_amount).to be_kind_of(BigDecimal) }
+        specify { expect(ex_transaction.original_currency_amount).to eq(BigDecimal('19.69')) }
+      end
+
+      specify { expect(ex_transaction.currency).to eq('EUR') }
+      specify { expect(ex_transaction.original_currency).to eq('CHF') }
+      specify { expect(ex_transaction.exchange_rate).to eq('0.9433') }
+    end
+
 
     specify { expect(ex_transaction.name).to eq("Finanz AG") }
     specify { expect(ex_transaction.creditor_reference).to eq("RF38000000000000000000552") }
