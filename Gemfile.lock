@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    camt_parser (2.17.0)
+    camt_parser (2.18.0)
       bigdecimal
       nokogiri
 
