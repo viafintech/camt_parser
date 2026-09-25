@@ -10,6 +10,8 @@ RSpec.describe CamtParser::Misc do
     specify { expect(described_class.to_amount_in_cents(dot_value)).to eq(3012) }
     specify { expect(described_class.to_amount_in_cents(comma_value)).to eq(3012) }
     specify { expect(described_class.to_amount_in_cents(integer_value)).to eq(100) }
+    specify { expect(described_class.to_amount_in_cents('30.1')).to eq(3010) }
+    specify { expect { described_class.to_amount_in_cents('30.123') }.to raise_error(ArgumentError) }
     specify { expect(described_class.to_amount_in_cents('')).to eq(nil) }
     specify { expect(described_class.to_amount_in_cents(nil)).to eq(nil) }
   end

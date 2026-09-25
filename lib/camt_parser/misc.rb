@@ -8,8 +8,11 @@ module CamtParser
         return nil if value == nil || value.strip == ''
 
         # Using dollars and cents as representation for parts before and after the decimal separator
-        dollars, cents = value.split(/,|\./)
+        dollars, cents = value.split(/,|\./, 2)
         cents ||= '0'
+        if cents.length > 2
+          raise ArgumentError, "amount has more than two decimal digits: #{value}"
+        end
         format('%s%s', dollars, cents.ljust(2, '0')).to_i
       end
 
